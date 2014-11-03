@@ -5,7 +5,7 @@ from my_app.models import Users
 def index(request):
     users_list = Users.objects.all().order_by('id')
     context = {'users_list': users_list}
-    if 'delete' in request.POST:
+    if request.POST['delete']:
     	user_id = request.POST['delete']
     	Users.objects.filter(id=user_id).delete()
     return render(request, 'my_app/index.html', context)
