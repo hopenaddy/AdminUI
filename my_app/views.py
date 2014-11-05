@@ -29,3 +29,6 @@ def add(request):
 def edit(request, id):
     user = Users.objects.get(id=id) 
     return _send_page(request, user)
+
+def sum(a, b):
+    return a+b
