@@ -65,7 +65,7 @@ DATABASES = {
         'HOST':"85.10.205.173",
         'USER':"lamp128",
         'PASSWORD':"Rfhnjyrf",
-    }
+    },
 }
 
 # Internationalization

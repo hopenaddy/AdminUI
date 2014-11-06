@@ -1,7 +1,16 @@
-from my_app.sum import sum
-from my_app.views import index
+from django.test import TestCase, Client, RequestFactory
+from views import *
 
-def test_sum():
-	assert sum(1, 1) == 2
-	assert sum(1, 2) == 3
+class IndexPageTest(TestCase):
+    def setUp(self):
+        self.factory = RequestFactory()
 
+    def test_userpage_available(self):
+        request = self.factory.get('')
+        response = index(request)
+        self.assertEqual(response.status_code, 200)
+
+    def test_addpage_available(self):
+        request = self.factory.get('')
+        response = add(request)
+        self.assertEqual(response.status_code, 200)    
