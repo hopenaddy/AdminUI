@@ -6,8 +6,8 @@ class IndexPageTest(TestCase):
         self.factory = RequestFactory()
 
     def test_userpage_available(self):
-        request = self.factory.get('')
-        response = index(request)
+        c=Client()
+        response = c.get("/users/")
         self.assertEqual(response.status_code, 200)
 
     def test_addpage_available(self):
