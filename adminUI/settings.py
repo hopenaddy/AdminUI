@@ -68,17 +68,8 @@ DATABASES = {
         #'TEST_DEPENDENCIES': ['slave'],
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'TEST_DEPENDENCIES': ['slave'],
+        'TEST_MIRROR': 'default'
     },
-    'slave': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #    'USER':"",
-     #   'PASSWORD':"",
-        #'TEST_DEPENDENCIES': [],
-        'TEST_MIRROR': 'default',
-        # ... plus some other settings
-    }
 }
 
 # Internationalization

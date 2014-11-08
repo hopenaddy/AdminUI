@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from my_app.models import Users
 
-
 def index(request):
     users_list = Users.objects.all().order_by('id')
     context = {'users_list': users_list}
@@ -29,6 +28,3 @@ def add(request):
 def edit(request, id):
     user = Users.objects.get(id=id) 
     return _send_page(request, user)
-
-def sum(a, b):
-    return a+b
