@@ -19,7 +19,7 @@ def send_page(request, user):
     if "save" in request.POST:
         user_save(request, user)
         return redirect('index')
-    return render(request, 'my_app/add.html', {'user': user})   
+    return render(request, 'my_app/add.html', {'user': user})
 
 def add(request):
     user = Users()

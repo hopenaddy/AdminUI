@@ -1,7 +1,7 @@
 {% extends "my_app/base.html" %}
 
 {% block content %}
-<form action="" method="POST" class="form-signin">
+<form action="" method="POST" class="form-signin" name="user_form">
 	{% csrf_token %}
 	<input class="form-control" type="text" name="login" placeholder="login" value="{{ user.login }}" required>
 	<input class="form-control" type="text" name="fullname" placeholder="fullname" value="{{ user.fullname }}" required>

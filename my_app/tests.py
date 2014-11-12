@@ -1,7 +1,7 @@
 from django.test import TestCase, RequestFactory
 from views import *
 from my_app.models import Users
-from model_mommy import mommy
+
 
 class IndexPageTest(TestCase):
     def setUp(self):
@@ -11,21 +11,19 @@ class IndexPageTest(TestCase):
     def test_userpage_available(self):
         request = self.factory.get("")
         response = index(request)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.content.find('id="is_it_users"') != (-1),True)
 
     def test_addpage_available(self):
         request = self.factory.get("")
         response = add(request)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.content.find('name="user_form"') != (-1),True)
+        self.assertEqual(response.content.find('value=""') != (-1),True)
 
     def test_editpage_available(self):
         request = self.factory.get("")
         response = edit(request,1)
-        self.assertEqual(response.status_code, 200)
-
-    def test_whatever_creation_mommy(self):
-        what = mommy.make(Users)
-        self.assertTrue(isinstance(what, Users))
+        self.assertEqual(response.content.find('name="user_form"') != (-1),True)
+        self.assertEqual(response.content.find('value=""') == (-1),True)
 
     def test_user_save(self):
         request = self.factory.post("/users/", {"login":"test_user",
@@ -45,7 +43,12 @@ class IndexPageTest(TestCase):
         self.assertEqual(not Users.objects.filter(id=id), True)
 
     def test_send_page(self):
-        user=Users()
         request = self.factory.post("/users/")
         response = send_page(request, self.user)
         self.assertEqual(response.content, add(request).content)
+
+    def test_send_page_if_save(self):
+        request = self.factory.post("/users/add", {"save":1, "login":"test_user",
+                                    "fullname":"test_fullname","token":"test_token"})
+        response = send_page(request, self.user)
+        self.assertEqual(response.url, "/users/")
