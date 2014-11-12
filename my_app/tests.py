@@ -11,18 +11,18 @@ class IndexPageTest(TestCase):
     def test_userpage_available(self):
         request = self.factory.get("")
         response = index(request)
-        self.assertEqual(response.content.find('id="is_it_users"') != (-1),True)
+        self.assertEqual(response.content.find('id="is_it_users"') > (-1),True)
 
     def test_addpage_available(self):
         request = self.factory.get("")
         response = add(request)
-        self.assertEqual(response.content.find('name="user_form"') != (-1),True)
-        self.assertEqual(response.content.find('value=""') != (-1),True)
+        self.assertEqual(response.content.find('name="user_form"') > (-1),True)
+        self.assertEqual(response.content.find('value=""') > (-1),True)
 
     def test_editpage_available(self):
         request = self.factory.get("")
         response = edit(request,1)
-        self.assertEqual(response.content.find('name="user_form"') != (-1),True)
+        self.assertEqual(response.content.find('name="user_form"') > (-1),True)
         self.assertEqual(response.content.find('value=""') == (-1),True)
 
     def test_user_save(self):
