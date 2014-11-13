@@ -7,6 +7,7 @@ def deploy():
     if not venv.exists():
         venv.create()
     venv.install()
+    put("adminUI/urls.py", ROOT)
     put("adminUI/settings.py", ROOT)
     put("manage.py", ROOT)
     put("lv128_adminUI.service", ROOT)
