@@ -5,7 +5,7 @@ Description=LVWEB-128 adminUI
 User=deploy
 Group=deploy
 Environment="APPDIR=/opt/lv128/adminUI/"
-ExecStart=/bin/bash -c "source $APPDIR/bin/activate ; python $APPDIR/manege.py -l $APPDIR/../log/adminUI.log -p 8881"
+ExecStart=/bin/bash -c "source $APPDIR/bin/activate ; python $APPDIR/manage.py -l $APPDIR/../log/adminUI.log -p 8881"
 
 [Install]
 WantedBy=multi-user.target

@@ -26,5 +26,5 @@ def add(request):
     return send_page(request, user)
     
 def edit(request, id):
-    user = Users.objects.get(id=id) 
+    user = Users.objects.get(id=id)
     return send_page(request, user)
