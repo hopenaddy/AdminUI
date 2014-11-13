@@ -1,10 +1,10 @@
 [Unit]
-Description=LVWEB-128 adminUI
+Description=LVWEB-128 AdminUI
 
 [Service]
 User=deploy
 Group=deploy
-Environment="APPDIR=/opt/lv128/adminUI/"
+Environment="APPDIR=/opt/lv128/AdminUI/"
 ExecStart=/bin/bash -c "source $APPDIR/bin/activate ; python $APPDIR/manage.py -l $APPDIR/../log/adminUI.log -p 8881"
 
 [Install]
