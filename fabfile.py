@@ -1,7 +1,7 @@
 from fabric.api import put, run
 from fabvenv import Venv
 
-ROOT = "/opt/lv128/adminUI"
+ROOT = "/opt/lv128/AdminUI"
 def deploy():
     venv = Venv(ROOT, "requirements.txt")
     if not venv.exists():
