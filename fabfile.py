@@ -7,6 +7,7 @@ def deploy():
     if not venv.exists():
         venv.create()
     venv.install()
+    put("requirements.txt")
     put("adminUI", ROOT)
     put("my_app", ROOT)
     put("manage.py", ROOT)
