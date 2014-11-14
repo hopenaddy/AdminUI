@@ -7,7 +7,9 @@ def deploy():
     if not venv.exists():
         venv.create()
     venv.install()
-    put("*", ROOT)
+    put("adminUI", ROOT)
+    put("my_app", ROOT)
+    put("manage.py", ROOT)
     put("lv128_adminUI.service", ROOT)
     run("sudo mv %s/lv128_adminUI.service /etc/systemd/system/" % ROOT)
     run("sudo systemctl enable lv128_adminUI")
