@@ -7,6 +7,7 @@ def deploy():
     if not venv.exists():
         venv.create()
     venv.install()
+    sudo('chmod -R 777 %s/adminUI' % ROOT)
     put("*", ROOT)
     put("lv128_adminUI.service", ROOT)
     run("sudo mv %s/lv128_adminUI.service /etc/systemd/system/" % ROOT)
