@@ -64,7 +64,7 @@ DATABASES = {
         #'NAME': "testbase128",
         #'HOST':"85.10.205.173",
         #'USER':"lamp128",
-       # 'PASSWORD':"Rfhnjyrf",
+        #'PASSWORD':"Rfhnjyrf",
         #'TEST_DEPENDENCIES': ['slave'],
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
