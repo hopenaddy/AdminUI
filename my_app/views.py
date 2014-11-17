@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from my_app.models import Users
 
+def main_page(request):
+    return redirect('/users/')
+
 def index(request):
     users_list = Users.objects.all().order_by('id')
     context = {'users_list': users_list}
