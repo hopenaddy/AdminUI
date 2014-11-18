@@ -15,8 +15,10 @@
     			<td>{{ user.total_msg_counter }}</td>
     			<td>{{ user.success_msg_counter }}</td>
     			<td>{{ user.failed_msg_counter }}</td>
+          {% if username %}
     			<td><a href="edit/{{ user.id }}"><button name="edit" type="button" class="btn btn-sm btn-warning">edit</button></a></td>
     			<td><button name="delete" value="{{user.id}}" class="btn btn-sm btn-danger">delete</button></td>
+          {% endif %}
   			</tr>
   		{% endfor %}
 		</table> 
@@ -24,5 +26,7 @@
 	{% else %}
     <p>No users are available.</p>
 	{% endif %}
-  <a href="{% url "add" %}"><button name="add" class="btn btn-sm btn-primary" id="is_it_users">add</button></a>
+  {% if username %}
+    <a href="{% url "add" %}"><button name="add" class="btn btn-sm btn-primary" id="is_it_users">add</button></a>
+  {% endif %}
 {% endblock %}
