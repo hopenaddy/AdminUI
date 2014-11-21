@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 from my_app.models import Users
+from django.contrib import auth
 
 def main_page(request):
-    return redirect('/users/')
+    return redirect('index')
 
 def index(request):
     users_list = Users.objects.all().order_by('id')
-    context = {'users_list': users_list}
+    context = {'users_list': users_list, 'username': auth.get_user(request).username}
     if "delete" in request.POST:
         user_id = request.POST['delete']
         Users.objects.filter(id=user_id).delete()
@@ -22,7 +23,7 @@ def send_page(request, user):
     if "save" in request.POST:
         user_save(request, user)
         return redirect('index')
-    return render(request, 'my_app/add.html', {'user': user})
+    return render(request, 'my_app/add.html', {'user': user, 'username': auth.get_user(request).username})
 
 def add(request):
     user = Users()

@@ -8,6 +8,7 @@ def deploy():
         venv.create()
     venv.install()
     put("requirements.txt")
+    put("loginsys", ROOT)
     put("adminUI", ROOT)
     put("my_app", ROOT)
     put("manage.py", ROOT)
