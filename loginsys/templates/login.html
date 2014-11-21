@@ -4,8 +4,10 @@
 <form class="form-signin" method="post">
 	{% csrf_token %}
     <h2 class="form-signin-heading">Please sign in</h2>
-    <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
-    <input type="password" name="password" class="form-control" placeholder="Password" required>
+    <label for="username">Username</label>
+    <input type="text" name="username" class="form-control" required autofocus>
+    <label for="password">Password</label>
+    <input type="password" name="password" class="form-control" required>
     {% if login_error %}
     <label class="error">{{login_error}}</label>
     {% endif %}

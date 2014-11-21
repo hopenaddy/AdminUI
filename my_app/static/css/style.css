@@ -3,3 +3,6 @@
 	padding: 15px;
 	margin: 0 auto;
 }
+button[name="sing_in"]{
+	margin-top: 10px;
+}
