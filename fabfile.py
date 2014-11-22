@@ -12,6 +12,7 @@ def deploy():
     put("adminUI", ROOT)
     put("my_app", ROOT)
     put("manage.py", ROOT)
+    put("db.sqlite3", ROOT)
     put("lv128_adminUI.service", ROOT)
     run("sudo mv %s/lv128_adminUI.service /etc/systemd/system/" % ROOT)
     run("sudo systemctl enable lv128_adminUI")
