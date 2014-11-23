@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from my_app.models import Users
+import uuid
 
 def main_page(request):
     return redirect('/users/')
@@ -15,7 +16,7 @@ def index(request):
 def user_save(request, user):
     user.login = request.POST['login']
     user.fullname = request.POST['fullname']
-    user.token = request.POST['token']
+    user.token = uuid.uuid4()
     user.save()
 
 def send_page(request, user):
