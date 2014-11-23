@@ -17,7 +17,8 @@ def index(request):
 def user_save(request, user):
     user.login = request.POST['login']
     user.fullname = request.POST['fullname']
-    user.token = uuid.uuid4()
+    if not user.token: 
+        user.token = uuid.uuid4()
     user.save()
 
 def send_page(request, user):
