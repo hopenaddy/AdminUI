@@ -1,18 +1,17 @@
 {% extends "my_app/base.html" %}
 
 {% block content %}	
-	{% if tokens_list %}
+	{% if users_list %}
 	<form action="" method="POST">
 	{% csrf_token %}
 
 		<table class="table table-striped">
 		{% for user in users_list %}
-    {% for tokens in tokens_list %}
   			<tr>
   				<td>{{ user.id }}</td>
     			<td>{{ user.login }}</td>
     			<td>{{ user.fullname }}</td>
-    			<td>{{ tokens.token }}</td>
+    			<td>{{ Tokens.token }}</td>
     			<td>{{ user.total_msg_counter }}</td>
     			<td>{{ user.success_msg_counter }}</td>
     			<td>{{ user.failed_msg_counter }}</td>
@@ -22,7 +21,6 @@
           {% endif %}
   			</tr>
   		{% endfor %}
-      {% endfor %}
 		</table> 
     </form>
 	{% else %}
