@@ -7,6 +7,17 @@
 </head>
 <body>
 <div class="container">
+<div >
+	<div class="panel panel-default">
+		<ul class="list-unstyled text-right">
+			{% if username %}
+				<button><li><a href="/auth/logout/">LogOut ({{ username }})</a></li></button>
+			{% else %}	
+				<button><li><a href="/auth/login/">LogIn</a></li></button>
+			{% endif %}	
+		</ul>
+	</div>
+</div>
 {% block content %}{% endblock %}
 </div>
 </body>

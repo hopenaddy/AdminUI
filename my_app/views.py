@@ -1,14 +1,18 @@
 from django.shortcuts import render, redirect
 from my_app.models import Users
+<<<<<<< HEAD
 import uuid
+=======
+from django.contrib import auth
+>>>>>>> 030a9679ba7bab3f98f1ab964e0b8622c022ccf4
 
 def main_page(request):
-    return redirect('/users/')
+    return redirect('index')
 
 def index(request):
     users_list = Users.objects.all().order_by('id')
-    context = {'users_list': users_list}
-    if "delete" in request.POST:
+    context = {'users_list': users_list, 'username': auth.get_user(request).username}
+    if "delete" in request.POST and request.user.is_authenticated():
         user_id = request.POST['delete']
         Users.objects.filter(id=user_id).delete()
     return render(request, 'my_app/index.html', context)
@@ -23,12 +27,16 @@ def send_page(request, user):
     if "save" in request.POST:
         user_save(request, user)
         return redirect('index')
-    return render(request, 'my_app/add.html', {'user': user})
+    return render(request, 'my_app/add.html', {'user': user, 'username': auth.get_user(request).username})
 
 def add(request):
-    user = Users()
-    return send_page(request, user)
+    if request.user.is_authenticated():
+        user = Users()
+        return send_page(request, user)
+    return render(request, 'my_app/permission_denide.html')
     
 def edit(request, id):
-    user = Users.objects.get(id=id)
-    return send_page(request, user)
+    if request.user.is_authenticated():
+        user = Users.objects.get(id=id)
+        return send_page(request, user)
+    return render(request, 'my_app/permission_denide.html')
