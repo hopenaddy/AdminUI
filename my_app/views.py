@@ -1,10 +1,7 @@
 from django.shortcuts import render, redirect
 from my_app.models import Users
-<<<<<<< HEAD
 import uuid
-=======
 from django.contrib import auth
->>>>>>> 030a9679ba7bab3f98f1ab964e0b8622c022ccf4
 
 def main_page(request):
     return redirect('index')
