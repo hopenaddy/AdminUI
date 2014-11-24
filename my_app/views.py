@@ -3,7 +3,6 @@ from my_app.models import Users
 import uuid
 from django.contrib import auth
 
-
 def main_page(request):
     return redirect('index')
 
@@ -18,7 +17,8 @@ def index(request):
 def user_save(request, user):
     user.login = request.POST['login']
     user.fullname = request.POST['fullname']
-    user.token = uuid.uuid4()
+    if not user.token: 
+        user.token = uuid.uuid4()
     user.save()
 
 def send_page(request, user):
