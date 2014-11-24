@@ -5,7 +5,7 @@
 	{% csrf_token %}
 	<input class="form-control" type="text" name="login" placeholder="login" value="{{ user.login }}" required>
 	<input class="form-control" type="text" name="fullname" placeholder="fullname" value="{{ user.fullname }}" required>
-	<input class="form-control" type="text" name="token" placeholder="token" value="{{ user.token }}" required>
+	
 	<button name="save" class="btn btn-sm btn-success">save</button>
 </form>
 {% endblock %}
