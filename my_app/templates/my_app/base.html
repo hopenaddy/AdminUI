@@ -11,9 +11,9 @@
 	<div class="panel panel-default">
 		<ul class="list-unstyled text-right">
 			{% if username %}
-				<button><li><a href="/auth/logout/">LogOut ({{ username }})</a></li></button>
+				<li><a href="/auth/logout/"><button>LogOut</button> ({{ username }})</a></li>
 			{% else %}	
-				<button><li><a href="/auth/login/">LogIn</a></li></button>
+				<li><a href="/auth/login/"><button>LogIn</button></a></li>
 			{% endif %}	
 		</ul>
 	</div>
