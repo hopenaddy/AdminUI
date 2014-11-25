@@ -9,13 +9,9 @@
 <div class="container">
 <div >
 	<div class="panel panel-default">
-		<ul class="list-unstyled text-right">
-			{% if username %}
-				<li><a href="/auth/logout/" class="btn btn-sm btn-primary">LogOut ({{ username }})</a></li>
-			{% else %}	
-				<li><a href="/auth/login/" class="btn btn-sm btn-primary">LogIn</a></li>
-			{% endif %}	
-		</ul>
+		{% if username %}
+			<p class="list-unstyled text-right"><a href="/accounts/logout/" class="btn btn-sm btn-primary">LogOut ({{ username }})</a></p>	
+		{% endif %}	
 	</div>
 </div>
 {% block content %}{% endblock %}

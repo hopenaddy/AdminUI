@@ -6,5 +6,5 @@ urlpatterns = patterns('',
     url(r'^$', views.main_page),
     url(r'^users/', include('my_app.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^auth/', include('loginsys.urls')),
+    url(r'^accounts/', include('loginsys.urls')),
 )
