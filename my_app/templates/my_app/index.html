@@ -6,6 +6,15 @@
 	{% csrf_token %}
 
 		<table class="table table-striped">
+        <tr>
+          <td>Id</td>
+          <td>Login</td>
+          <td>Fullname</td>
+          <td>Token</td>
+          <td>Total_msg</td>
+          <td>Success_msg</td>
+          <td>Failed_msg</td>
+        </tr>
 		{% for user in users_list %}
   			<tr>
   				<td>{{ user.id }}</td>
