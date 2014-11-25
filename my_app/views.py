@@ -7,12 +7,14 @@ def main_page(request):
     return redirect('index')
 
 def index(request):
-    users_list = Users.objects.all().order_by('id')
-    context = {'users_list': users_list, 'username': auth.get_user(request).username}
-    if "delete" in request.POST and request.user.is_authenticated():
-        user_id = request.POST['delete']
-        Users.objects.filter(id=user_id).delete()
-    return render(request, 'my_app/index.html', context)
+    if request.user.is_authenticated():
+        users_list = Users.objects.all().order_by('id')
+        context = {'users_list': users_list, 'username': auth.get_user(request).username}
+        if "delete" in request.POST:
+            user_id = request.POST['delete']
+            Users.objects.filter(id=user_id).delete()
+        return render(request, 'my_app/index.html', context)
+    return redirect('/auth/login/?next=%s' % request.path)
 
 def user_save(request, user):
     user.login = request.POST['login']
@@ -31,10 +33,10 @@ def add(request):
     if request.user.is_authenticated():
         user = Users()
         return send_page(request, user)
-    return render(request, 'my_app/permission_denide.html')
+    return redirect('/auth/login/?next=%s' % request.path)
     
 def edit(request, id):
     if request.user.is_authenticated():
         user = Users.objects.get(id=id)
         return send_page(request, user)
-    return render(request, 'my_app/permission_denide.html')
+    return redirect('/auth/login/?next=%s' % request.path)
