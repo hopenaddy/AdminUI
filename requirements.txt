@@ -1,5 +1,6 @@
 Django==1.7
 wsgiref==0.1.2
 zope.interface==4.0.5
-mysql-devel
+mysql-connector-python
+mysql-utilities
 mysql-python
