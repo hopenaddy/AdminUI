@@ -18,7 +18,8 @@ def user_save(request, user, tokens):
     user.login = request.POST['login']
     user.fullname = request.POST['fullname']
     user.save()
-    tokens.token = request.POST['token']
+    if not tokens.token:
+        tokens.token = uuid.uuid4()
     tokens.user_id = Users.objects.get(login=request.POST['login']).id
     tokens.save()
 
