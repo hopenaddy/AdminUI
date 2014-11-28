@@ -6,3 +6,7 @@
 button[name="sing_in"]{
 	margin-top: 10px;
 }
+.wreapper{
+	margin: 0 auto;
+	width: 80%;
+}
