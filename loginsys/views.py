@@ -1,5 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import auth
+import logging
+
+
+logger=logging.getLogger(__name__)
 
 def login(request):
 	args ={}
@@ -10,6 +14,7 @@ def login(request):
 		user_log = auth.authenticate(username=username, password=password)
 		if user_log is not None:
 			auth.login(request, user_log)
+			logger.debug("%s SignIn" % (auth.get_user(request).username))
 			return redirect(redirect_to) 
 		else:
 			args['login_error'] = "wrong name or password"
@@ -18,5 +23,6 @@ def login(request):
 		return render(request, 'login.html')			
 
 def logout(request):
+	logger.debug("%s Log Out" % (auth.get_user(request).username))
 	auth.logout(request)
 	return redirect('/users/')

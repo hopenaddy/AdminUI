@@ -92,3 +92,40 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGGING  =  { 
+    'version' :  1 , 
+    'disable_existing_loggers' :  True ,
+    'formatters':{
+        'standard':{
+            'format':'%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+        },
+    }, 
+    'handlers' :  { 
+        'default' :  { 
+            'level' :  'DEBUG' , 
+            'class' :  'logging.handlers.RotatingFileHandler' , 
+            'filename' :  'log/all_operation.log' ,
+            'formatter' : 'standard',
+
+        },
+         'request_handler' :  { 
+            'level' :  'DEBUG' , 
+            'class' :  'logging.FileHandler' , 
+            'filename' :  'log/debug.log' , 
+            'formatter' : 'standard',
+        }, 
+    }, 
+    'loggers':  { 
+        '':{
+            'handlers' :  [ 'default' ], 
+            'level' :  'DEBUG' , 
+            'propagate' :  False ,
+        },    
+        'django.request':  { 
+            'handlers' :  [ 'request_handler' ], 
+            'level' :  'DEBUG' , 
+            'propagate' :  False , 
+        }, 
+    }, 
+}
