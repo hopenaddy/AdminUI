@@ -105,14 +105,14 @@ LOGGING  =  {
         'default' :  { 
             'level' :  'DEBUG' , 
             'class' :  'logging.handlers.RotatingFileHandler' , 
-            'filename' :  'log/all_operation.log' ,
+            'filename' :  '../log/AdminUI/all_operation.log' ,
             'formatter' : 'standard',
 
         },
          'request_handler' :  { 
             'level' :  'DEBUG' , 
             'class' :  'logging.FileHandler' , 
-            'filename' :  'log/debug.log' , 
+            'filename' :  '../log/AdminUI/debug.log' , 
             'formatter' : 'standard',
         }, 
     }, 
