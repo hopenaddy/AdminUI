@@ -103,16 +103,16 @@ LOGGING  =  {
     }, 
     'handlers' :  { 
         'default' :  { 
-            'level' :  'DEBUG' , 
+            'level' :  'INFO' , 
             'class' :  'logging.handlers.RotatingFileHandler' , 
-            'filename' :  '/opt/lv128/log/AdminUI/all_operation.log' ,
+            'filename' :  '/opt/lv128/log/admin_all_operation.log' ,
             'formatter' : 'standard',
 
         },
          'request_handler' :  { 
             'level' :  'DEBUG' , 
             'class' :  'logging.FileHandler' , 
-            'filename' :  '/opt/lv128/log/AdminUI/debug.log' , 
+            'filename' :  '/opt/lv128/log/admin_debug.log' , 
             'formatter' : 'standard',
         }, 
     }, 
