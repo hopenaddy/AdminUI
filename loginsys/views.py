@@ -10,19 +10,28 @@ def login(request):
 	args ={}
 	args["form"]=AuthenticationForm()
 	redirect_to = request.REQUEST.get('next', '/')
-	new_form=AuthenticationForm(request.POST)
+	new_form=AuthenticationForm(data=request.POST)
+	#if "sing_in" in request.POST:
+	#	username = request.POST.get("username","")
+	#	password = request.POST.get("password","")
+	#	user_log = auth.authenticate(username=username, password=password)
+	#	if user_log is not None:
+	#		auth.login(request, user_log)
+	#		logger.debug("%s SignIn" % (auth.get_user(request).username))
+	#		return redirect(redirect_to) 
+	#	else:
+	#		args['login_error'] = "wrong name or password"
+	#		return render(request, 'login.html', args)
+	#else:
 	if "sing_in" in request.POST:
-		username = request.POST.get("username","")
-		password = request.POST.get("password","")
-		user_log = auth.authenticate(username=username, password=password)
-		if user_log is not None:
-			auth.login(request, user_log)
+		if new_form.is_valid():
+			auth.login(request, new_form.user_cache)
 			logger.debug("%s SignIn" % (auth.get_user(request).username))
-			return redirect(redirect_to) 
+			return redirect(redirect_to)
 		else:
 			args['login_error'] = "wrong name or password"
 			return render(request, 'login.html', args)
-	else:
+	else:	
 		return render(request, 'login.html', args)			
 
 def logout(request):
