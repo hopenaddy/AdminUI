@@ -5,14 +5,14 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 import logging
 
-url_login='/auth/login/'
+
 logger=logging.getLogger(__name__)
 
 def main_page(request):
     
     return redirect('index')
 
-@login_required(login_url=url_login)
+@login_required()
 def index(request):
     users_list = Users.objects.all().order_by('id')
     context = {'users_list': users_list, 'username': auth.get_user(request).username}
@@ -38,12 +38,12 @@ def send_page(request, user):
         return redirect('index')
     return render(request, 'my_app/add.html', {'user': user, 'username': auth.get_user(request).username})
 
-@login_required(login_url=url_login)
+@login_required()
 def add(request):
         user = Users()
         return send_page(request, user)
 
-@login_required(login_url=url_login)    
+@login_required()    
 def edit(request, id):
         user = Users.objects.get(id=id)
         return send_page(request, user)

@@ -93,6 +93,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOGIN_URL = '/auth/login/'
+
 LOGGING  =  { 
     'version' :  1 , 
     'disable_existing_loggers' :  True ,
