@@ -5,7 +5,7 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 import logging
 
-url_login='/accounts/login/'
+url_login='/auth/login/'
 logger=logging.getLogger(__name__)
 
 def main_page(request):
