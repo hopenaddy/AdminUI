@@ -26,6 +26,7 @@ def login(request):
 	if "sing_in" in request.POST:
 		if new_form.is_valid():
 			auth.login(request, new_form.user_cache)
+			print new_form.user_cache
 			logger.debug("%s SignIn" % (auth.get_user(request).username))
 			return redirect(redirect_to)	
 	return render(request, 'login.html', args)			

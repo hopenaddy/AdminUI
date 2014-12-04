@@ -1,7 +1,7 @@
 {% extends "my_app/base.html" %}
 
 {% block content %}	
-	{% if users_list %}
+	{% if profile_list %}
 	<form action="" method="POST">
 	{% csrf_token %}
 
@@ -9,21 +9,23 @@
         <tr>
           <td>Id</td>
           <td>Login</td>
-          <td>Fullname</td>
-          <td>Token</td>
+          <td>First_name</td>
+          <td>Last_name</td>
+          <td>Full_name</td>
           <td>Total_msg</td>
           <td>Success_msg</td>
           <td>Failed_msg</td>
         </tr>
-		{% for user in users_list %}
+		{% for profile in profile_list %}
   			<tr>
-  				<td>{{ user.id }}</td>
-    			<td>{{ user.login }}</td>
-    			<td>{{ user.fullname }}</td>
-    			<td>{{ user.token }}</td>
-    			<td>{{ user.total_msg_counter }}</td>
-    			<td>{{ user.success_msg_counter }}</td>
-    			<td>{{ user.failed_msg_counter }}</td>
+          <td>{{ profile.id }}</td>
+          <td>{{ profile.user.username }}</td>
+          <td>{{ profile.user.first_name }}</td>
+          <td>{{ profile.user.last_name }}</td>
+          <td>{{ profile }}</td>
+          <td>{{ profile.msg.total_msg_counter }}</td>
+          <td>{{ profile.msg.success_msg_counter }}</td>
+          <td>{{ profile.msg.failed_msg_counter }}</td>
           {% if username %}
     			<td><a href="edit/{{ user.id }}" class="btn btn-sm btn-warning">Edit</a></td>
     			<td><button name="delete" value="{{user.id}}" class="btn btn-sm btn-danger">delete</button></td>

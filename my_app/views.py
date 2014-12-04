@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from my_app.models import Users
+from my_app.models import *
 import uuid
+from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 import logging
@@ -14,11 +15,11 @@ def main_page(request):
 
 @login_required()
 def index(request):
-    users_list = Users.objects.all().order_by('id')
-    context = {'users_list': users_list, 'username': auth.get_user(request).username}
+    profile_list = Profile.objects.all().order_by('id')
+    context = {'profile_list': profile_list, 'username': auth.get_user(request).username}
     if "delete" in request.POST:
         user_id = request.POST['delete']
-        Users.objects.filter(id=user_id).delete()
+        User.objects.filter(id=user_id).delete()
         logger.debug("%s delete user with id= %s" % (auth.get_user(request).username, user_id))
     return render(request, 'my_app/index.html', context)
     
@@ -40,10 +41,10 @@ def send_page(request, user):
 
 @login_required()
 def add(request):
-        user = Users()
+        user = User()
         return send_page(request, user)
 
 @login_required()    
 def edit(request, id):
-        user = Users.objects.get(id=id)
+        user = User.objects.get(id=id)
         return send_page(request, user)
