@@ -6,8 +6,7 @@ def main_page(request):
     return redirect('index')
 
 def index(request):
-    users_list = Users.objects.all().order_by('id')
-    tokens_list = Tokens.objects.all().order_by('id')
+    users_list = Tokens.objects.all().order_by('id')
     context = {'users_list': users_list, 'tokens_list':tokens_list, 'username': auth.get_user(request).username}
     if "delete" in request.POST:
         user_id = request.POST['delete']
