@@ -3,9 +3,9 @@
 {% block content %}
 <form action="" method="POST" class="form-signin" name="user_form">
 	{% csrf_token %}
-	<input class="form-control" type="text" name="login" placeholder="login" value="{{ user.login }}" required>
-	<input class="form-control" type="text" name="fullname" placeholder="fullname" value="{{ user.fullname }}" required>
-
+	<input class="form-control" type="text" name="login" placeholder="login" value="{{ user.username }}" required>
+	<input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}" required>
+	<input class="form-control" type="text" name="last" placeholder="last_name" value="{{ user.last_name }}" required>
 	<button name="save" class="btn btn-sm btn-success">save</button>
 </form>
 {% endblock %}

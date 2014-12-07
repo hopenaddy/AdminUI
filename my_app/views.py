@@ -10,13 +10,12 @@ import logging
 logger=logging.getLogger(__name__)
 
 def main_page(request):
-    
     return redirect('index')
 
 @login_required()
 def index(request):
-    profile_list = Profile.objects.all().order_by('id')
-    context = {'profile_list': profile_list, 'username': auth.get_user(request).username}
+    user_list = User.objects.all().order_by('id')
+    context = {'user_list': user_list, 'username': auth.get_user(request).username}
     if "delete" in request.POST:
         user_id = request.POST['delete']
         User.objects.filter(id=user_id).delete()
@@ -24,14 +23,20 @@ def index(request):
     return render(request, 'my_app/index.html', context)
     
 def user_save(request, user):
-    user.login = request.POST['login']
-    user.fullname = request.POST['fullname']
-    if not user.token: 
-        user.token = uuid.uuid4()
-        logger.debug("%s create user login= %s fullname= %s" % (auth.get_user(request).username, user.login, user.fullname))
+    user.username = request.POST['login']
+    user.first_name = request.POST['first']
+    user.last_name = request.POST['last']
+    if not user.id:
+        user.save()
+        id=User.objects.last().id
+        profile = Profile()
+        profile.user_id=id 
+        profile.token = uuid.uuid4()
+        profile.save()
+        logger.debug("%s create user login= %s fullname= %s" % (auth.get_user(request).username, user.username, user.get_full_name()))
     else:
-        logger.debug("%s edit user login= %s fullname= %s" % (auth.get_user(request).username, user.login, user.fullname))        
-    user.save()
+        logger.debug("%s edit user login= %s fullname= %s" % (auth.get_user(request).username, user.username, user.get_full_name()))
+        user.save()
 
 def send_page(request, user):
     if "save" in request.POST:

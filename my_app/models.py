@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
-	user = models.ForeignKey(User, related_name="profile")
-	ava = models.CharField(max_length="30")
+	user = models.ForeignKey(User, related_name="prof")
 	token = models.CharField(max_length="30")
 	class Meta:
 		verbose_name = 'Profiles'
@@ -13,7 +12,7 @@ class Profile(models.Model):
 		return self.user.get_full_name()
 
 class Msg(models.Model):
-	profile = models.ForeignKey(Profile, related_name="msg")
+	user = models.OneToOneField(User, primary_key=True, related_name="msg")
 	total_msg_counter = models.IntegerField(default=0)
 	success_msg_counter = models.IntegerField(default=0)
 	failed_msg_counter = models.IntegerField(default=0)
