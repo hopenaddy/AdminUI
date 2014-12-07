@@ -1,0 +1,1639 @@
+2014-12-02 19:51:33,735 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 26, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 187, in clean
+    username = self.cleaned_data.get('username')
+AttributeError: 'AuthenticationForm' object has no attribute 'cleaned_data'
+2014-12-02 19:51:34,426 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-02 19:57:33,740 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 27, in login
+    form = SearchForm(request.POST or None)
+NameError: global name 'SearchForm' is not defined
+2014-12-02 19:57:34,924 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 27, in login
+    form = SearchForm(request.POST or None)
+NameError: global name 'SearchForm' is not defined
+2014-12-02 19:58:30,176 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^accounts/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 5, in <module>
+    from books.forms import BookForm, SearchForm
+ImportError: No module named books.forms
+2014-12-02 19:59:01,501 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^accounts/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 4, in <module>
+    from django.contrib.auth.forms import AuthenticationForm, SearchForm
+ImportError: cannot import name SearchForm
+2014-12-02 19:59:02,613 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^accounts/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 4, in <module>
+    from django.contrib.auth.forms import AuthenticationForm, SearchForm
+ImportError: cannot import name SearchForm
+2014-12-02 20:07:32,647 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 26, in login
+    print new_form.is_valid(request.POST)
+TypeError: is_valid() takes exactly 1 argument (2 given)
+2014-12-02 20:27:46,010 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^accounts/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 26
+    auth.login(request, new_form.user_cache)
+   ^
+IndentationError: unexpected indent
+2014-12-02 20:28:08,853 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 26, in login
+    auth.login(request, new_form.user_cache)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 97, in login
+    request.session[BACKEND_SESSION_KEY] = user.backend
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 225, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'backend'
+2014-12-02 20:29:11,981 [WARNING] django.request: Forbidden (CSRF token missing or incorrect.): /accounts/login/
+2014-12-02 20:29:23,980 [WARNING] django.request: Forbidden (CSRF token missing or incorrect.): /accounts/login/
+2014-12-02 20:29:36,646 [WARNING] django.request: Forbidden (CSRF token missing or incorrect.): /accounts/login/
+2014-12-02 20:31:04,171 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    auth.login(request, new_form.user_cache)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 97, in login
+    request.session[BACKEND_SESSION_KEY] = user.backend
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 225, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'backend'
+2014-12-02 20:35:11,003 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 27, in login
+    auth.login(request, user_cache)
+NameError: global name 'user_cache' is not defined
+2014-12-02 20:35:31,002 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 27, in login
+    auth.login(request, user_cache)
+NameError: global name 'user_cache' is not defined
+2014-12-02 20:35:47,967 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 27, in login
+    auth.login(request, user_cache)
+NameError: global name 'user_cache' is not defined
+2014-12-02 20:35:59,932 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 27, in login
+    auth.login(request, user_cache)
+NameError: global name 'user_cache' is not defined
+2014-12-02 20:36:17,738 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-02 20:48:33,106 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 30, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 187, in clean
+    username = self.cleaned_data.get('username')
+AttributeError: 'AuthenticationForm' object has no attribute 'cleaned_data'
+2014-12-02 20:49:43,070 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 30, in login
+    new_form.clean(data)
+NameError: global name 'data' is not defined
+2014-12-02 20:50:16,890 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 30, in login
+    new_form.clean(request.POST)
+TypeError: clean() takes exactly 1 argument (2 given)
+2014-12-02 20:58:45,316 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:02:16,109 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-02 21:02:19,371 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:03:30,402 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:03:41,270 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:05:45,075 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:06:28,009 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:06:41,827 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:11:12,066 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:13:38,114 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    print new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:14:03,018 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    print new_form.clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-02 21:15:26,240 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^accounts/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28
+    if not new_form.clean()
+                          ^
+SyntaxError: invalid syntax
+2014-12-02 21:15:33,372 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^accounts/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28
+    if not new_form.clean()
+                          ^
+SyntaxError: invalid syntax
+2014-12-02 21:15:52,876 [ERROR] django.request: Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 28, in login
+    if not new_form.clean():
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 197, in clean
+    params={'username': self.username_field.verbose_name},
+ValidationError: [u'Please enter a correct username and password. Note that both fields may be case-sensitive.']
+2014-12-05 18:54:38,151 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-05 18:56:47,192 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 29, in index
+    return render(request, 'my_app/index.html', context)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 178, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 312, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 201, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 93, in render
+    output = force_text(output)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 85, in force_text
+    s = six.text_type(s)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 81, in __str__
+    in opts.concrete_managers + opts.abstract_managers
+StopIteration
+2014-12-05 19:01:47,581 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 21, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-05 19:04:10,921 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 18, in index
+    u.profile_set.token = "Root"
+AttributeError: 'User' object has no attribute 'profile_set'
+2014-12-05 19:04:11,200 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 18, in index
+    u.profile_set.token = "Root"
+AttributeError: 'User' object has no attribute 'profile_set'
+2014-12-05 19:05:22,732 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 21, in index
+    print u.profile_set.token
+AttributeError: 'User' object has no attribute 'profile_set'
+2014-12-05 19:06:00,215 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 21, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-05 19:06:32,446 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-05 19:06:47,745 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-05 19:06:53,823 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-05 19:09:06,847 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 20, in index
+    u.msg_set.total_msg_counter=5
+AttributeError: 'User' object has no attribute 'msg_set'
+2014-12-07 14:32:01,521 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-07 14:32:04,029 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 20, in index
+    u.msg_set.total_msg_counter=5
+AttributeError: 'User' object has no attribute 'msg_set'
+2014-12-07 14:32:50,095 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.total_msg_counter.all()
+AttributeError: 'RelatedManager' object has no attribute 'total_msg_counter'
+2014-12-07 14:33:15,475 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token.all()
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-07 14:33:17,822 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token.all()
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-07 14:34:09,297 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token.all()
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-07 14:35:18,239 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-07 14:35:36,394 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-07 14:35:39,442 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile.token
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-07 14:36:13,486 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 38, in <lambda>
+    klass.__str__ = lambda self: self.__unicode__().encode('utf-8')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 81, in __str__
+    in opts.concrete_managers + opts.abstract_managers
+StopIteration
+2014-12-07 14:37:28,635 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.all()
+AttributeError: 'User' object has no attribute 'all'
+2014-12-07 14:37:56,128 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 38, in <lambda>
+    klass.__str__ = lambda self: self.__unicode__().encode('utf-8')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 81, in __str__
+    in opts.concrete_managers + opts.abstract_managers
+StopIteration
+2014-12-07 14:38:20,199 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 18, in index
+    u.profile.token = "Root"
+AttributeError: 'User' object has no attribute 'profile'
+2014-12-07 14:38:33,956 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.profile
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 38, in <lambda>
+    klass.__str__ = lambda self: self.__unicode__().encode('utf-8')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 81, in __str__
+    in opts.concrete_managers + opts.abstract_managers
+StopIteration
+2014-12-07 14:40:26,274 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 19, in index
+    u.profile.ava = "Ava"
+AttributeError: 'User' object has no attribute 'profile'
+2014-12-07 14:40:59,563 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.prof
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 38, in <lambda>
+    klass.__str__ = lambda self: self.__unicode__().encode('utf-8')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 81, in __str__
+    in opts.concrete_managers + opts.abstract_managers
+StopIteration
+2014-12-07 14:41:23,397 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.prof.username
+AttributeError: 'RelatedManager' object has no attribute 'username'
+2014-12-07 14:41:41,799 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.prof.ava
+AttributeError: 'RelatedManager' object has no attribute 'ava'
+2014-12-07 14:42:05,749 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 22, in index
+    print u.prof.objects.all()
+AttributeError: 'RelatedManager' object has no attribute 'objects'
+2014-12-07 14:46:23,226 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 18, in index
+    print u.prof.token.all()
+AttributeError: 'RelatedManager' object has no attribute 'token'
+2014-12-07 14:46:48,182 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 18, in index
+    print u.prof.all().token
+AttributeError: 'QuerySet' object has no attribute 'token'
+2014-12-07 14:49:34,068 [WARNING] django.request: Not Found: /admon
+2014-12-07 14:55:59,346 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 18, in index
+    print u.prof.all().token
+AttributeError: 'QuerySet' object has no attribute 'token'
+2014-12-07 15:02:56,158 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 27, in index
+    return render(request, 'my_app/index.html', context)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 201, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 175, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 975, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 833, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 832, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '()' from 'user.prof.all()'
+2014-12-07 15:03:58,850 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 27, in index
+    return render(request, 'my_app/index.html', context)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 178, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 312, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 201, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = list(values)
+TypeError: 'RelatedManager' object is not iterable
+2014-12-07 15:20:56,986 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 18, in index
+    print u.msg.all()
+AttributeError: 'Msg' object has no attribute 'all'
+2014-12-07 15:54:42,685 [ERROR] django.request: Internal Server Error: /users/edit/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 50, in edit
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 38, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 27, in user_save
+    user.first_name = request.POST['first']
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/datastructures.py", line 319, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'first'"
+2014-12-07 15:55:31,198 [ERROR] django.request: Internal Server Error: /users/edit/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 50, in edit
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 38, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 33, in user_save
+    logger.debug("%s edit user login= %s fullname= %s" % (auth.get_user(request).username, user.login, user.fullname))
+AttributeError: 'User' object has no attribute 'login'
+2014-12-07 15:56:25,771 [ERROR] django.request: Internal Server Error: /users/edit/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 50, in edit
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 38, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 33, in user_save
+    logger.debug("%s edit user login= %s fullname= %s" % (auth.get_user(request).username, user.login, user.fullname))
+AttributeError: 'User' object has no attribute 'login'
+2014-12-07 15:57:36,799 [ERROR] django.request: Internal Server Error: /users/edit/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 50, in edit
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 38, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 33, in user_save
+    logger.debug("%s edit user login= %s fullname= %s" % (auth.get_user(request).username, user.login, user.fullname))
+AttributeError: 'User' object has no attribute 'login'
+2014-12-07 15:57:43,027 [ERROR] django.request: Internal Server Error: /users/edit/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 50, in edit
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 38, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 33, in user_save
+    logger.debug("%s edit user login= %s fullname= %s" % (auth.get_user(request).username, user.login, user.fullname))
+AttributeError: 'User' object has no attribute 'login'
+2014-12-07 16:15:29,850 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 3, in <module>
+    from my_app import views
+  File "/home/alive/git/AdminUI/my_app/views.py", line 31
+    user.prof.get(user.username=request.POST['login']).token = uuid.uuid4()
+SyntaxError: keyword can't be an expression
+2014-12-07 16:16:12,615 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 46, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 39, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 30, in user_save
+    profile=User.prof()
+TypeError: 'ForeignRelatedObjectsDescriptor' object is not callable
+2014-12-07 16:17:12,657 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 45, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 38, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 34, in user_save
+    print user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 591, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 619, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 700, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 733, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: column username is not unique
+2014-12-07 16:28:40,802 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 46, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 39, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 31, in user_save
+    user.prof.last().token = uuid.uuid4()
+AttributeError: 'NoneType' object has no attribute 'token'
+2014-12-07 16:30:07,656 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 46, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 39, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 31, in user_save
+    user.prof.get(username=request.POST['login']).token = uuid.uuid4()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 345, in get
+    clone = self.filter(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 691, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 709, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1287, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1314, in _add_q
+    current_negated=current_negated, connector=connector)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1138, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1076, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1383, in names_to_path
+    self.raise_field_error(opts, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1389, in raise_field_error
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'username' into field. Choices are: id, token, user, user_id
+2014-12-07 16:32:23,891 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 46, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 39, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 31, in user_save
+    user.prof.get(username=request.POST['login']).token = uuid.uuid4()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 345, in get
+    clone = self.filter(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 691, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 709, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1287, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1314, in _add_q
+    current_negated=current_negated, connector=connector)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1138, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1076, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1383, in names_to_path
+    self.raise_field_error(opts, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1389, in raise_field_error
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'username' into field. Choices are: id, token, user, user_id
+2014-12-07 16:34:24,657 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 46, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 39, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 31, in user_save
+    user.get(username=request.POST['login']).prof.token = uuid.uuid4()
+AttributeError: 'User' object has no attribute 'get'
+2014-12-07 16:35:11,903 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 46, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 39, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 31, in user_save
+    user.objects.get(username=request.POST['login']).prof.token = uuid.uuid4()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 206, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % type.__name__)
+AttributeError: Manager isn't accessible via User instances
+2014-12-07 16:47:53,340 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-07 16:49:26,563 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 47, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 40, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 31, in user_save
+    user.prof.save()
+AttributeError: 'RelatedManager' object has no attribute 'save'
+2014-12-07 16:49:55,257 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 47, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 40, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 36, in user_save
+    user.prof.save()
+AttributeError: 'RelatedManager' object has no attribute 'save'
+2014-12-07 16:55:04,956 [ERROR] django.request: Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 49, in add
+    return send_page(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 42, in send_page
+    user_save(request, user)
+  File "/home/alive/git/AdminUI/my_app/views.py", line 30, in user_save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 591, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 619, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 700, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 733, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: column username is not unique
+2014-12-07 17:58:33,283 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 7
+    url(r'^registration/$', views.registration, name='registration')
+      ^
+SyntaxError: invalid syntax
+2014-12-07 17:59:02,129 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 20, in login
+    return render(request, 'login.html', args)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 201, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 175, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 266, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '{% url "registraton" %}' from '{% url "registraton" %}'
+2014-12-07 18:00:18,491 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 20, in login
+    return render(request, 'login.html', args)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 201, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 175, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 266, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '{% url "registration" %}' from '{% url "registration" %}'
+2014-12-07 18:00:51,601 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 20, in login
+    return render(request, 'login.html', args)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 201, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 175, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 266, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '% url "registration" %' from '% url "registration" %'
+2014-12-07 18:00:53,381 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 20, in login
+    return render(request, 'login.html', args)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 48, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 201, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 175, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 266, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '% url "registration" %' from '% url "registration" %'
+2014-12-07 18:02:04,486 [WARNING] django.request: Not Found: /auth/login/{ % url
+2014-12-07 18:03:32,926 [WARNING] django.request: Not Found: /auth/login/{ % url
+2014-12-07 18:03:41,578 [WARNING] django.request: Not Found: /auth/login/{ % url
+2014-12-07 18:04:58,157 [WARNING] django.request: Not Found: /auth/login/{ % url
+2014-12-07 18:05:01,345 [WARNING] django.request: Not Found: /auth/login/{ % url
+2014-12-07 18:05:06,882 [WARNING] django.request: Not Found: /auth/login/{ % url
+2014-12-07 18:06:25,284 [WARNING] django.request: Not Found: /auth/login/{ % url
+2014-12-07 18:06:31,534 [WARNING] django.request: Not Found: /auth/{ % url
+2014-12-07 18:07:02,124 [WARNING] django.request: Not Found: /auth/{ % url
+2014-12-07 18:07:04,653 [WARNING] django.request: Not Found: /auth/{ % url
+2014-12-07 18:07:14,791 [WARNING] django.request: Not Found: /{ % url
+2014-12-07 18:07:44,958 [WARNING] django.request: Not Found: /{ % url
+2014-12-07 18:08:13,328 [WARNING] django.request: Not Found: /{ % url
+2014-12-07 18:08:18,320 [WARNING] django.request: Not Found: /auth/{ % url
+2014-12-07 18:09:17,499 [WARNING] django.request: Not Found: /auth/{ % url
+2014-12-07 18:09:22,539 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: registration() takes no arguments (1 given)
+2014-12-07 18:31:22,360 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 30
+    prinr args.form
+             ^
+SyntaxError: invalid syntax
+2014-12-07 18:31:40,784 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 30, in registration
+    print args.form
+AttributeError: 'dict' object has no attribute 'form'
+2014-12-07 18:34:29,433 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 34, in registration
+    new_form=auth.authenticate(username=new_form.cleaned_data('username'), password=new_form.cleaned_data('password2'))
+TypeError: 'dict' object is not callable
+2014-12-07 18:40:15,909 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 34
+    new_form=auth.authenticate(username=new_form.username, password=new_form.password2))
+                                                                                       ^
+SyntaxError: invalid syntax
+2014-12-07 18:41:03,424 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 34, in registration
+    new_form=auth.authenticate(username=new_form.username, password=new_form.password2)
+AttributeError: 'UserCreationForm' object has no attribute 'username'
+2014-12-07 18:42:17,332 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 34, in registration
+    new_form=auth.authenticate(username=new_form.username, password=new_form.password2)
+AttributeError: 'UserCreationForm' object has no attribute 'username'
+2014-12-07 18:54:16,436 [ERROR] django.request: Internal Server Error: /auth/logout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 42
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 18:57:00,419 [ERROR] django.request: Internal Server Error: /auth/logout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 43
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 18:57:02,135 [ERROR] django.request: Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 43
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 18:57:03,667 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 43
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 18:57:39,601 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 43
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 18:57:45,638 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 43
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 19:00:09,007 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 44
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 19:00:43,627 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 44
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 19:00:56,117 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 44
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 19:00:57,269 [ERROR] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/adminUI/urls.py", line 9, in <module>
+    url(r'^auth/', include('loginsys.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/alive/git/AdminUI/loginsys/urls.py", line 2, in <module>
+    from loginsys import views
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 44
+    return redirect('/')
+   ^
+IndentationError: unexpected indent
+2014-12-07 19:02:19,207 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 41, in registration
+    profile.token = uuid.uuid4()
+NameError: global name 'uuid' is not defined
+2014-12-07 19:03:21,446 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 44, in registration
+    logger.debug("%s create user login= %s fullname= %s" % (auth.get_user(request).username, user.username, user.get_full_name()))
+NameError: global name 'user' is not defined
+2014-12-07 19:05:18,616 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 44, in registration
+    logger.debug("%s create user login= %s fullname= %s" % (auth.get_user(request).username, new_form.cleaned_data['username']))
+AttributeError: 'User' object has no attribute 'cleaned_data'
+2014-12-07 19:06:56,332 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/git/AdminUI/loginsys/views.py", line 37, in registration
+    logger.debug("%s create user login= %s fullname= %s" % (auth.get_user(request).username, new_form.cleaned_data['username']))
+TypeError: not enough arguments for format string
