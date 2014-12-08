@@ -22,7 +22,7 @@ def login(request):
 			logger.debug("%s SignIn" % (auth.get_user(request).username))
 			return redirect(redirect_to)
 		else: 
-			args["form"] = new_form=		
+			args["form"] = new_form		
 	return render(request, 'login.html', args)			
 
 def logout(request):
