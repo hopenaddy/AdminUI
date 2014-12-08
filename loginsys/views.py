@@ -12,14 +12,17 @@ logger=logging.getLogger(__name__)
 def login(request):
 	args ={}
 	redirect_to = request.REQUEST.get('next', '/')
-	new_form=AuthenticationForm(data=request.POST)
-	args["form"] = new_form
+	
+	args["form"] = AuthenticationForm()
 	if "sing_in" in request.POST:
+		new_form=AuthenticationForm(data=request.POST)
 		if new_form.is_valid():
 			auth.login(request, new_form.user_cache)
 			print new_form.user_cache
 			logger.debug("%s SignIn" % (auth.get_user(request).username))
-			return redirect(redirect_to)	
+			return redirect(redirect_to)
+		else: 
+			args["form"] = new_form=		
 	return render(request, 'login.html', args)			
 
 def logout(request):
