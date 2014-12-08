@@ -1,0 +1,144 @@
+2014-12-02 20:26:02,088 [DEBUG] loginsys.views: root Log Out
+2014-12-02 20:26:59,983 [DEBUG] loginsys.views: alive Log Out
+2014-12-02 20:27:20,006 [DEBUG] loginsys.views: root Log Out
+2014-12-02 20:32:34,284 [DEBUG] loginsys.views: root Log Out
+2014-12-02 20:36:19,896 [DEBUG] loginsys.views: root Log Out
+2014-12-02 20:36:37,883 [DEBUG] loginsys.views: alive Log Out
+2014-12-02 20:39:24,654 [DEBUG] loginsys.views: alive Log Out
+2014-12-02 20:39:28,001 [DEBUG] loginsys.views: alive SignIn
+2014-12-02 20:40:06,972 [DEBUG] loginsys.views: alive Log Out
+2014-12-02 20:40:14,287 [DEBUG] loginsys.views: root SignIn
+2014-12-02 20:41:48,276 [DEBUG] loginsys.views: root Log Out
+2014-12-02 20:42:57,218 [DEBUG] loginsys.views: root SignIn
+2014-12-02 20:42:58,727 [DEBUG] loginsys.views: root Log Out
+2014-12-02 21:20:37,443 [DEBUG] loginsys.views: root SignIn
+2014-12-02 21:20:39,415 [DEBUG] loginsys.views: root Log Out
+2014-12-02 21:20:49,633 [DEBUG] loginsys.views: root SignIn
+2014-12-02 21:21:03,475 [DEBUG] my_app.views: root edit user login= Alive fullname= Pavlo Levytskyi
+2014-12-05 18:40:03,581 [DEBUG] django.db.backends.schema: CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); (params [])
+2014-12-05 18:40:04,296 [DEBUG] django.db.backends.schema: CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params [])
+2014-12-05 18:40:04,301 [DEBUG] django.db.backends.schema: CREATE TABLE "django_content_type__new" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, UNIQUE ("app_label", "model")); (params [])
+2014-12-05 18:40:04,302 [DEBUG] django.db.backends.schema: INSERT INTO "django_content_type__new" ("model", "app_label", "id", "name") SELECT "model", "app_label", "id", "name" FROM "django_content_type"; (params [])
+2014-12-05 18:40:04,302 [DEBUG] django.db.backends.schema: DROP TABLE "django_content_type"; (params [])
+2014-12-05 18:40:04,303 [DEBUG] django.db.backends.schema: ALTER TABLE "django_content_type__new" RENAME TO "django_content_type"; (params [])
+2014-12-05 18:40:04,687 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, UNIQUE ("content_type_id", "codename")); (params [])
+2014-12-05 18:40:04,698 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); (params [])
+2014-12-05 18:40:04,699 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("group_id", "permission_id")); (params [])
+2014-12-05 18:40:04,713 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); (params [])
+2014-12-05 18:40:04,715 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), UNIQUE ("user_id", "group_id")); (params [])
+2014-12-05 18:40:04,717 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("user_id", "permission_id")); (params [])
+2014-12-05 18:40:04,717 [DEBUG] django.db.backends.schema: CREATE INDEX auth_permission_417f1b1c ON "auth_permission" ("content_type_id"); (params [])
+2014-12-05 18:40:04,718 [DEBUG] django.db.backends.schema: CREATE INDEX auth_group_permissions_0e939a4f ON "auth_group_permissions" ("group_id"); (params [])
+2014-12-05 18:40:04,718 [DEBUG] django.db.backends.schema: CREATE INDEX auth_group_permissions_8373b171 ON "auth_group_permissions" ("permission_id"); (params [])
+2014-12-05 18:40:04,719 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_groups_e8701ad4 ON "auth_user_groups" ("user_id"); (params [])
+2014-12-05 18:40:04,719 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_groups_0e939a4f ON "auth_user_groups" ("group_id"); (params [])
+2014-12-05 18:40:04,719 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_user_permissions_e8701ad4 ON "auth_user_user_permissions" ("user_id"); (params [])
+2014-12-05 18:40:04,720 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_user_permissions_8373b171 ON "auth_user_user_permissions" ("permission_id"); (params [])
+2014-12-05 18:40:05,156 [DEBUG] django.db.backends.schema: CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); (params [])
+2014-12-05 18:40:05,157 [DEBUG] django.db.backends.schema: CREATE INDEX django_admin_log_417f1b1c ON "django_admin_log" ("content_type_id"); (params [])
+2014-12-05 18:40:05,158 [DEBUG] django.db.backends.schema: CREATE INDEX django_admin_log_e8701ad4 ON "django_admin_log" ("user_id"); (params [])
+2014-12-05 18:40:05,507 [DEBUG] django.db.backends.schema: CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); (params [])
+2014-12-05 18:40:05,508 [DEBUG] django.db.backends.schema: CREATE INDEX django_session_de54fa62 ON "django_session" ("expire_date"); (params [])
+2014-12-05 18:54:40,559 [DEBUG] loginsys.views: root SignIn
+2014-12-07 14:32:03,691 [DEBUG] loginsys.views: root SignIn
+2014-12-07 14:50:24,768 [DEBUG] django.db.backends.schema: CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); (params [])
+2014-12-07 14:50:24,957 [DEBUG] django.db.backends.schema: CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params [])
+2014-12-07 14:50:24,963 [DEBUG] django.db.backends.schema: CREATE TABLE "django_content_type__new" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, UNIQUE ("app_label", "model")); (params [])
+2014-12-07 14:50:24,964 [DEBUG] django.db.backends.schema: INSERT INTO "django_content_type__new" ("model", "app_label", "id", "name") SELECT "model", "app_label", "id", "name" FROM "django_content_type"; (params [])
+2014-12-07 14:50:24,964 [DEBUG] django.db.backends.schema: DROP TABLE "django_content_type"; (params [])
+2014-12-07 14:50:24,965 [DEBUG] django.db.backends.schema: ALTER TABLE "django_content_type__new" RENAME TO "django_content_type"; (params [])
+2014-12-07 14:50:25,369 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, UNIQUE ("content_type_id", "codename")); (params [])
+2014-12-07 14:50:25,375 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); (params [])
+2014-12-07 14:50:25,376 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("group_id", "permission_id")); (params [])
+2014-12-07 14:50:25,387 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); (params [])
+2014-12-07 14:50:25,388 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), UNIQUE ("user_id", "group_id")); (params [])
+2014-12-07 14:50:25,389 [DEBUG] django.db.backends.schema: CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("user_id", "permission_id")); (params [])
+2014-12-07 14:50:25,390 [DEBUG] django.db.backends.schema: CREATE INDEX auth_permission_417f1b1c ON "auth_permission" ("content_type_id"); (params [])
+2014-12-07 14:50:25,390 [DEBUG] django.db.backends.schema: CREATE INDEX auth_group_permissions_0e939a4f ON "auth_group_permissions" ("group_id"); (params [])
+2014-12-07 14:50:25,391 [DEBUG] django.db.backends.schema: CREATE INDEX auth_group_permissions_8373b171 ON "auth_group_permissions" ("permission_id"); (params [])
+2014-12-07 14:50:25,391 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_groups_e8701ad4 ON "auth_user_groups" ("user_id"); (params [])
+2014-12-07 14:50:25,391 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_groups_0e939a4f ON "auth_user_groups" ("group_id"); (params [])
+2014-12-07 14:50:25,392 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_user_permissions_e8701ad4 ON "auth_user_user_permissions" ("user_id"); (params [])
+2014-12-07 14:50:25,392 [DEBUG] django.db.backends.schema: CREATE INDEX auth_user_user_permissions_8373b171 ON "auth_user_user_permissions" ("permission_id"); (params [])
+2014-12-07 14:50:25,815 [DEBUG] django.db.backends.schema: CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); (params [])
+2014-12-07 14:50:25,816 [DEBUG] django.db.backends.schema: CREATE INDEX django_admin_log_417f1b1c ON "django_admin_log" ("content_type_id"); (params [])
+2014-12-07 14:50:25,816 [DEBUG] django.db.backends.schema: CREATE INDEX django_admin_log_e8701ad4 ON "django_admin_log" ("user_id"); (params [])
+2014-12-07 14:50:26,205 [DEBUG] django.db.backends.schema: CREATE TABLE "my_app_msg" ("user_id" integer NOT NULL PRIMARY KEY REFERENCES "auth_user" ("id"), "total_msg_counter" integer NOT NULL, "success_msg_counter" integer NOT NULL, "failed_msg_counter" integer NOT NULL); (params [])
+2014-12-07 14:50:26,219 [DEBUG] django.db.backends.schema: CREATE TABLE "my_app_profile" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ava" varchar(30) NOT NULL, "token" varchar(30) NOT NULL, "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); (params [])
+2014-12-07 14:50:26,220 [DEBUG] django.db.backends.schema: CREATE INDEX my_app_profile_e8701ad4 ON "my_app_profile" ("user_id"); (params [])
+2014-12-07 14:50:26,600 [DEBUG] django.db.backends.schema: CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); (params [])
+2014-12-07 14:50:26,602 [DEBUG] django.db.backends.schema: CREATE INDEX django_session_de54fa62 ON "django_session" ("expire_date"); (params [])
+2014-12-07 15:36:48,046 [DEBUG] django.db.backends.schema: CREATE TABLE "my_app_profile__new" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(30) NOT NULL, "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); (params [])
+2014-12-07 15:36:48,046 [DEBUG] django.db.backends.schema: INSERT INTO "my_app_profile__new" ("token", "user_id", "id") SELECT "token", "user_id", "id" FROM "my_app_profile"; (params [])
+2014-12-07 15:36:48,047 [DEBUG] django.db.backends.schema: DROP TABLE "my_app_profile"; (params [])
+2014-12-07 15:36:48,047 [DEBUG] django.db.backends.schema: ALTER TABLE "my_app_profile__new" RENAME TO "my_app_profile"; (params [])
+2014-12-07 15:36:48,048 [DEBUG] django.db.backends.schema: CREATE INDEX my_app_profile_e8701ad4 ON "my_app_profile" ("user_id"); (params [])
+2014-12-07 15:36:48,073 [DEBUG] django.db.backends.schema: CREATE TABLE "my_app_profile__new" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(30) NOT NULL, "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); (params [])
+2014-12-07 15:36:48,074 [DEBUG] django.db.backends.schema: INSERT INTO "my_app_profile__new" ("token", "user_id", "id") SELECT "token", "user_id", "id" FROM "my_app_profile"; (params [])
+2014-12-07 15:36:48,074 [DEBUG] django.db.backends.schema: DROP TABLE "my_app_profile"; (params [])
+2014-12-07 15:36:48,074 [DEBUG] django.db.backends.schema: ALTER TABLE "my_app_profile__new" RENAME TO "my_app_profile"; (params [])
+2014-12-07 15:36:48,075 [DEBUG] django.db.backends.schema: CREATE INDEX my_app_profile_e8701ad4 ON "my_app_profile" ("user_id"); (params [])
+2014-12-07 15:59:42,680 [DEBUG] my_app.views: root edit user login= Alive fullname= Pavlo Levytskyi
+2014-12-07 16:08:57,629 [DEBUG] my_app.views: root create user login= test fullname= test test
+2014-12-07 16:10:51,479 [DEBUG] my_app.views: root create user login= moretest fullname= e test
+2014-12-07 16:11:08,012 [DEBUG] my_app.views: root edit user login= moretest fullname= e test
+2014-12-07 16:17:12,656 [DEBUG] my_app.views: root create user login= test fullname= e ewr
+2014-12-07 16:17:29,968 [DEBUG] my_app.views: root create user login= 43 fullname= e ewr
+2014-12-07 16:20:29,710 [DEBUG] my_app.views: root edit user login= 546 fullname= ert test
+2014-12-07 16:22:15,018 [DEBUG] my_app.views: root edit user login= fgh fullname= fgh gfh
+2014-12-07 16:23:24,482 [DEBUG] my_app.views: root delete user with id= 7
+2014-12-07 16:23:25,550 [DEBUG] my_app.views: root delete user with id= 6
+2014-12-07 16:23:26,463 [DEBUG] my_app.views: root delete user with id= 5
+2014-12-07 16:23:28,109 [DEBUG] my_app.views: root delete user with id= 4
+2014-12-07 16:25:56,015 [DEBUG] my_app.views: root create user login= q fullname= q q
+2014-12-07 16:47:57,033 [DEBUG] my_app.views: root delete user with id= 13
+2014-12-07 16:47:58,180 [DEBUG] my_app.views: root delete user with id= 12
+2014-12-07 16:47:59,025 [DEBUG] my_app.views: root delete user with id= 11
+2014-12-07 16:47:59,861 [DEBUG] my_app.views: root delete user with id= 10
+2014-12-07 16:48:01,018 [DEBUG] my_app.views: root delete user with id= 9
+2014-12-07 16:48:25,910 [DEBUG] my_app.views: root create user login= hgd fullname= dg gd
+2014-12-07 16:49:54,925 [DEBUG] my_app.views: root create user login= 32 fullname= 432 54
+2014-12-07 16:55:19,239 [DEBUG] my_app.views: root create user login= 32t fullname= 432 54
+2014-12-07 16:56:10,223 [DEBUG] my_app.views: root delete user with id= 16
+2014-12-07 16:56:11,058 [DEBUG] my_app.views: root delete user with id= 15
+2014-12-07 16:56:11,826 [DEBUG] my_app.views: root delete user with id= 14
+2014-12-07 16:56:19,866 [DEBUG] my_app.views: root create user login= wer fullname= ewtr ert
+2014-12-07 16:56:30,887 [DEBUG] my_app.views: root edit user login= wer fullname= ewtr ert
+2014-12-07 16:56:34,674 [DEBUG] my_app.views: root edit user login= q fullname= q q
+2014-12-07 16:56:47,625 [DEBUG] my_app.views: root edit user login= q fullname= q q
+2014-12-07 16:56:52,896 [DEBUG] my_app.views: root edit user login= q fullname= q q
+2014-12-07 16:57:31,566 [DEBUG] loginsys.views: root Log Out
+2014-12-07 16:58:01,625 [DEBUG] loginsys.views: Alive SignIn
+2014-12-07 17:47:57,713 [DEBUG] loginsys.views: Alive Log Out
+2014-12-07 17:50:50,270 [DEBUG] loginsys.views: root SignIn
+2014-12-07 17:50:51,920 [DEBUG] loginsys.views: root Log Out
+2014-12-07 18:41:26,601 [DEBUG] loginsys.views: root SignIn
+2014-12-07 18:42:08,226 [DEBUG] loginsys.views: root Log Out
+2014-12-07 18:49:19,724 [DEBUG] my_app.views: gfd delete user with id= 20
+2014-12-07 18:49:20,828 [DEBUG] my_app.views:  delete user with id= 21
+2014-12-07 18:49:24,999 [DEBUG] loginsys.views: root SignIn
+2014-12-07 18:49:26,880 [DEBUG] my_app.views: root delete user with id= 19
+2014-12-07 18:49:27,928 [DEBUG] my_app.views: root delete user with id= 18
+2014-12-07 18:49:29,153 [DEBUG] my_app.views: root delete user with id= 17
+2014-12-07 18:49:32,401 [DEBUG] my_app.views: root delete user with id= 8
+2014-12-07 18:49:41,107 [DEBUG] loginsys.views: root Log Out
+2014-12-07 18:49:58,771 [DEBUG] loginsys.views: Test Log Out
+2014-12-07 18:50:42,771 [DEBUG] loginsys.views: root SignIn
+2014-12-07 18:58:24,728 [DEBUG] loginsys.views: root Log Out
+2014-12-07 19:02:59,640 [DEBUG] loginsys.views: root SignIn
+2014-12-07 19:03:01,999 [DEBUG] my_app.views: root delete user with id= 23
+2014-12-07 19:03:03,279 [DEBUG] my_app.views: root delete user with id= 22
+2014-12-07 19:03:04,715 [DEBUG] my_app.views: root delete user with id= 3
+2014-12-07 19:03:09,657 [DEBUG] loginsys.views: root Log Out
+2014-12-07 19:05:04,349 [DEBUG] loginsys.views: root SignIn
+2014-12-07 19:05:06,677 [DEBUG] my_app.views: root delete user with id= 24
+2014-12-07 19:05:09,031 [DEBUG] loginsys.views: root Log Out
+2014-12-07 19:06:42,818 [DEBUG] loginsys.views: root SignIn
+2014-12-07 19:06:45,120 [DEBUG] my_app.views: root delete user with id= 25
+2014-12-07 19:06:46,890 [DEBUG] loginsys.views: root Log Out
+2014-12-07 19:08:27,274 [DEBUG] loginsys.views: root SignIn
+2014-12-07 19:08:29,512 [DEBUG] my_app.views: root delete user with id= 26
+2014-12-07 19:08:32,901 [DEBUG] loginsys.views: root Log Out
+2014-12-07 19:08:43,255 [DEBUG] loginsys.views: created user login= test
+2014-12-07 19:10:58,830 [DEBUG] my_app.views: test edit user login= test fullname= test test
+2014-12-07 19:11:04,894 [DEBUG] my_app.views: test edit user login= test fullname= test test

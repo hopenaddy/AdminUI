@@ -1,4 +1,5 @@
 from django.contrib import admin
-from my_app.models import Users
+from my_app.models import *
 
-admin.site.register(Users)
+admin.site.register(Profile)
+admin.site.register(Msg)
