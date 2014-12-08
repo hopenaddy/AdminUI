@@ -39,6 +39,8 @@ def registration(request):
 			new_form.save()
 			logger.debug("created user login= %s" % new_form.cleaned_data['username'])
 			new_form=auth.authenticate(username=new_form.cleaned_data['username'], password=new_form.cleaned_data['password2'])
+			if request.user.is_authenticated():
+				return redirect('/')
 			auth.login(request, new_form)
 			id=User.objects.last().id
 			profile = Profile()
