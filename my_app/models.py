@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
 	user = models.ForeignKey(User, related_name="prof")
-	token = models.CharField(max_length="30")
+	token = models.CharField(max_length="50")
 	class Meta:
 		verbose_name = 'Profiles'
 		verbose_name_plural = 'Profile'	
