@@ -9,6 +9,13 @@ from django.contrib.auth.models import User
 
 logger=logging.getLogger(__name__)
 
+def add_token(id):
+	profile = Profile()
+	profile.user_id=id 
+	profile.token = uuid.uuid4()
+	profile.save()
+	
+
 def login(request):
 	args ={}
 	redirect_to = request.REQUEST.get('next', '/')
@@ -37,16 +44,14 @@ def registration(request):
 		new_form=UserCreationForm(request.POST)
 		if new_form.is_valid():
 			new_form.save()
-			logger.debug("created user login= %s" % new_form.cleaned_data['username'])
-			new_form=auth.authenticate(username=new_form.cleaned_data['username'], password=new_form.cleaned_data['password2'])
+			new_user=auth.authenticate(username=new_form.cleaned_data['username'], password=new_form.cleaned_data['password2'])
 			id=User.objects.last().id
-			profile = Profile()
-			profile.user_id=id 
-			profile.token = uuid.uuid4()
-			profile.save()
+			add_token(id)
 			if request.user.is_authenticated():
+				logger.debug("%s creat user login= %s" % (request.user.username, new_user.username))
 				return redirect('/')
-			auth.login(request, new_form)
+			logger.debug("%s was registrated" % new_user.username)
+			auth.login(request, new_user)
 			return redirect('/')
 		else:
 			args['form']=new_form	
