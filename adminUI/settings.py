@@ -106,14 +106,14 @@ LOGGING  =  {
         'default' :  { 
             'level' :  'DEBUG' , 
             'class' :  'logging.handlers.RotatingFileHandler' , 
-            'filename' :  os.path.join('log/admin_all_operation.log') ,
+            'filename' :  '/opt/lv128/log/admin_all_operation.log' ,
             'formatter' : 'standard',
 
         },
          'request_handler' :  { 
             'level' :  'WARNING' , 
             'class' :  'logging.FileHandler' , 
-            'filename' :  os.path.join('log/admin_debug.log') , 
+            'filename' :  '/opt/lv128/log/admin_debug.log' , 
             'formatter' : 'standard',
         }, 
     }, 
