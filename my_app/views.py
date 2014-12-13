@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from my_app.models import *
+from django.core.urlresolvers import reverse
 import uuid
 from django.contrib.auth.models import User
 from django.contrib import auth
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 import logging
 
 
@@ -16,13 +17,17 @@ def main_page(request):
 def index(request):
     user_list = User.objects.all().order_by('id')
     context = {'user_list': user_list, 'username': auth.get_user(request).username}
-    if "delete" in request.POST:
-        user_id = request.POST['delete']
-        User.objects.filter(id=user_id).delete()
-        logger.debug("%s delete user with id= %s" % (auth.get_user(request).username, user_id))
-    return render(request, 'my_app/index.html', context)    
+    return render(request, 'my_app/index.html', context)
 
-@login_required()    
+@login_required()
+@permission_required("auth.delete_user")
+def delete(request, id):
+    User.objects.filter(id=id).delete()
+    logger.debug("%s delete user with id= %s" % (auth.get_user(request).username, id))
+    return redirect(reverse('index'))     
+
+@login_required() 
+@permission_required("auth.change_user")
 def edit(request, id):
     user = User.objects.get(id=id)
     if "save" in request.POST:

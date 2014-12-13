@@ -1,44 +1,43 @@
 {% extends "my_app/base.html" %}
 
-{% block content %}	
-	{% if user_list %}
-	<form action="" method="POST">
-	{% csrf_token %}
-
-		<table class="table table-striped">
-        <tr>
-          <td>Id</td>
-          <td>Login</td>
-          <td>Full_name</td>
-          <td>Token</td>
-          <td>Total_msg</td>
-          <td>Success_msg</td>
-          <td>Failed_msg</td>
-        </tr>
-		{% for user in user_list %}
-  			<tr>
-          <td>{{ user.id }}</td>
-          <td>{{ user.username }}</td>
-          <td>{{ user.get_full_name }}</td>
-          <td>
-            {% for profile in user.prof.all %}
-              {{ profile.token }}<br/>
+{% block content %} 
+    {% if user_list %}
+    <form action="" method="POST">
+    {% csrf_token %}
+        <table class="table table-striped">
+            <tr>
+              <td>Id</td>
+              <td>Login</td>
+              <td>Full_name</td>
+              <td>Token</td>
+              <td>Total_msg</td>
+              <td>Success_msg</td>
+              <td>Failed_msg</td>
+            </tr>
+            {% for user in user_list %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.get_full_name }}</td>
+                    <td>
+                        {% for profile in user.prof.all %}
+                            {{ profile.token }}<br/>
+                        {% endfor %}
+                    </td>
+                    <td>{{ user.msg.total_msg_counter }}</td>
+                    <td>{{ user.msg.success_msg_counter }}</td>
+                    <td>{{ user.msg.failed_msg_counter }}</td>
+                    {% if username %}
+                        <td><a href="edit/{{ user.id }}" class="btn btn-sm btn-warning">Edit</a></td>
+                        <td><a href="delete/{{ user.id }}" class="btn btn-sm btn-danger">Delete</a></td>
+                    {% endif %}
+                </tr>
             {% endfor %}
-          </td>
-          <td>{{ user.msg.total_msg_counter }}</td>
-          <td>{{ user.msg.success_msg_counter }}</td>
-          <td>{{ user.msg.failed_msg_counter }}</td>
-          {% if username %}
-    			<td><a href="edit/{{ user.id }}" class="btn btn-sm btn-warning">Edit</a></td>
-    			<td><button name="delete" value="{{user.id}}" class="btn btn-sm btn-danger">delete</button></td>
-          {% endif %}
-  			</tr>
-  		{% endfor %}
-		</table> 
+        </table> 
     </form>
-	{% else %}
+    {% else %}
     <p>No users are available.</p>
-	{% endif %}
+    {% endif %}
   {% if username %}
     <a href="/auth/registration" class="btn btn-sm btn-primary" id="is_it_users" >ADD</a>
   {% endif %}

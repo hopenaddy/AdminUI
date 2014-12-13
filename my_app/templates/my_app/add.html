@@ -1,11 +1,13 @@
 {% extends "my_app/base.html" %}
 
 {% block content %}
-<form action="" method="POST" class="form-signin" name="user_form">
-	{% csrf_token %}
-	<input class="form-control" type="text" name="login" placeholder="login" value="{{ user.username }}" required>
-	<input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}" required>
-	<input class="form-control" type="text" name="last" placeholder="last_name" value="{{ user.last_name }}" required>
-	<button name="save" class="btn btn-sm btn-success">save</button>
-</form>
+<div class='col-md-3 col-xs-6 col-sm-6 col-lg-3 col-sm-offset-3 col-md-offset-4 col-lg-offset-4'>
+	<form action="" method="POST" class="form-signin" name="user_form">
+		{% csrf_token %}
+		<input class="form-control" type="text" name="login" placeholder="login" value="{{ user.username }}" required>
+		<input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}" required>
+		<input class="form-control" type="text" name="last" placeholder="last_name" value="{{ user.last_name }}" required>
+		<button name="save" class="btn btn-sm btn-success">save</button>
+	</form>
+</div>	
 {% endblock %}
