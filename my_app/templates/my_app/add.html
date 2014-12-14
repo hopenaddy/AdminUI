@@ -1,13 +1,19 @@
 {% extends "my_app/base.html" %}
 
 {% block content %}
-<div class='col-md-3 col-xs-6 col-sm-6 col-lg-3 col-sm-offset-3 col-md-offset-4 col-lg-offset-4'>
-	<form action="" method="POST" class="form-signin" name="user_form">
-		{% csrf_token %}
-		<input class="form-control" type="text" name="login" placeholder="login" value="{{ user.username }}" required>
-		<input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}" required>
-		<input class="form-control" type="text" name="last" placeholder="last_name" value="{{ user.last_name }}" required>
-		<button name="save" class="btn btn-sm btn-success">save</button>
+<div class='col-md-4 col-xs-6 col-sm-6 col-lg-4 col-sm-offset-3 col-md-offset-4 col-lg-offset-4'>
+	<form action="" method="POST" name="user_form">
+		<table class="table table-striped">
+			{% csrf_token %}
+            <tr><input class="form-control" type="text" name="login" placeholder="login" value="{{ user.username }}" required></tr>
+			<tr><input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}" required></tr>
+			<tr><input class="form-control" type="text" name="last" placeholder="last_name" value="{{ user.last_name }}" required></tr>
+			{% for profile in user.prof.all %}
+				<tr><td>{{profile.token}}</td><td><button name="del" value="{{profile.id}}" class="btn btn-sm btn-danger">del</button></td></tr>
+			{% endfor %}
+			<tr><td><button class="btn btn-sm btn-primary" name="add">Add token</button></td>
+			<td><button name="save" class="btn btn-sm btn-success">save</button></td></tr>
+		</table>
 	</form>
 </div>	
 {% endblock %}
