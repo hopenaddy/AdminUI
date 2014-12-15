@@ -6,8 +6,8 @@
 		<table class="table table-striped">
 			{% csrf_token %}
             <tr><input class="form-control" type="text" name="login" placeholder="login" value="{{ user.username }}" required></tr>
-			<tr><input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}" required></tr>
-			<tr><input class="form-control" type="text" name="last" placeholder="last_name" value="{{ user.last_name }}" required></tr>
+			<tr><input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}"></tr>
+			<tr><input class="form-control" type="text" name="last" placeholder="last_name" value="{{ user.last_name }}"></tr>
 			{% for profile in user.prof.all %}
 				<tr><td>{{profile.token}}</td><td><button name="del" value="{{profile.id}}" class="btn btn-sm btn-danger">del</button></td></tr>
 			{% endfor %}
