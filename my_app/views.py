@@ -18,7 +18,7 @@ def main_page(request):
 def index(request):
     user_list = User.objects.all().order_by('id')
     context = {'user_list': user_list, 'username': auth.get_user(request).username}
-    if "delete" in request.POST:
+    if "delete" in request.POST and request.POST['delete'] != "1":
         if request.user.has_perm('auth.delete_user'):
             user_id = request.POST['delete']
             User.objects.filter(id=user_id).delete()
