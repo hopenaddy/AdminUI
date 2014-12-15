@@ -4,8 +4,11 @@ from django.core.urlresolvers import reverse
 import logging
 import uuid
 from my_app.models import *
+from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 
 logger=logging.getLogger(__name__)
@@ -29,7 +32,26 @@ def login(request):
 			logger.debug("%s SignIn" % (auth.get_user(request).username))
 			return redirect(redirect_to)
 		args["form"] = new_form		
-	return render(request, 'login.html', args)			
+	return render(request, 'login.html', args)	
+
+@csrf_exempt
+def authorize(request):
+    username = request.POST.get('username', False)
+    password = request.POST.get('password', False)
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        auth.login(request, user)
+        return HttpResponse(user)
+    else:
+        return HttpResponse("None")			
+
+@csrf_exempt
+def auth_check(request):
+	if request.user.is_authenticated():
+	    return HttpResponse("OK")
+	else:
+		return HttpResponse("None")
+	
 
 def logout(request):
 	logger.debug("%s Log Out" % (auth.get_user(request).username))
