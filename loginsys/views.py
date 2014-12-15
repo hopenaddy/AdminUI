@@ -28,8 +28,7 @@ def login(request):
 			auth.login(request, new_form.user_cache)
 			logger.debug("%s SignIn" % (auth.get_user(request).username))
 			return redirect(redirect_to)
-		else: 
-			args["form"] = new_form		
+		args["form"] = new_form		
 	return render(request, 'login.html', args)			
 
 def logout(request):
@@ -53,6 +52,5 @@ def registration(request):
 			logger.debug("%s was registrated" % new_user.username)
 			auth.login(request, new_user)
 			return redirect(reverse('index'))
-		else:
-			args['form']=new_form	
+		args['form']=new_form	
 	return render(request, 'registration.html', args)

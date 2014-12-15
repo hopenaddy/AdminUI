@@ -18,14 +18,12 @@ def main_page(request):
 def index(request):
     user_list = User.objects.all().order_by('id')
     context = {'user_list': user_list, 'username': auth.get_user(request).username}
-    return render(request, 'my_app/index.html', context)
-
-@login_required()
-@permission_required("auth.delete_user")
-def delete(request, id):
-    User.objects.filter(id=id).delete()
-    logger.debug("%s delete user with id= %s" % (auth.get_user(request).username, id))
-    return redirect(reverse('index'))     
+    if "delete" in request.POST:
+        if request.user.has_perm('auth.delete_user'):
+            user_id = request.POST['delete']
+            User.objects.filter(id=user_id).delete()
+            logger.debug("%s delete user with id= %s" % (auth.get_user(request).username, user_id))      
+    return render(request, 'my_app/index.html', context)  
 
 @login_required() 
 def edit(request, id):
@@ -43,5 +41,5 @@ def edit(request, id):
             user.save()
             return redirect('index')
         return render(request, 'my_app/add.html', {'user': user, 'username': auth.get_user(request).username})
-    return redirect('/auth/login/?next=%s' % request.path)    
+    return redirect('index') 
         
