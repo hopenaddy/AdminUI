@@ -14,24 +14,31 @@
               <td>Success_msg</td>
               <td>Failed_msg</td>
             </tr>
-            {% for user in user_list %}
-                <tr>
-                    <td>{{ user.id }}</td>
-                    <td>{{ user.username }}</td>
-                    <td>{{ user.get_full_name }}</td>
-                    <td>
-                        {% for profile in user.prof.all %}
-                            {{ profile.token }}<br/>
-                        {% endfor %}
-                    </td>
-                    <td>{{ user.msg.total_msg_counter }}</td>
-                    <td>{{ user.msg.success_msg_counter }}</td>
-                    <td>{{ user.msg.failed_msg_counter }}</td>
-                    {% if username %}
-                        <td><a href="edit/{{ user.id }}" class="btn btn-sm btn-warning">Edit</a></td>
-                        <td><button name="delete" value="{{user.id}}" class="btn btn-sm btn-danger">delete</button></td>
-                    {% endif %}
-                </tr>
+            {% for this_user in user_list %}
+               {% if this_user.id == user.id or check_edit %}
+                    <tr>
+                        <td>{{ this_user.id }}</td>
+                        <td>{{ this_user.username }}</td>
+                        <td>{{ this_user.get_full_name }}</td>
+                        <td>
+                            {% for profile in this_user.prof.all %}
+                                {{ profile.token }}<br/>
+                            {% endfor %}
+                        </td>
+                        <td>{{ this_user.msg.total_msg_counter }}</td>
+                        <td>{{ this_user.msg.success_msg_counter }}</td>
+                        <td>{{ this_user.msg.failed_msg_counter }}</td>
+                        <td>
+                            <a href="edit/{{ this_user.id }}" class="btn btn-sm btn-warning">Edit</a>
+                        </td>
+                        <td><button name="delete" value="{{this_user.id}}" class="btn btn-sm btn-danger">delete</button></td>
+                        {% if edit_perm %}
+                            <td>
+                                <a href="permission/{{ this_user.id }}" class="btn btn-sm btn-warning">Permission</a>
+                            </td>
+                            {% endif %}
+                    </tr>
+                {% endif %}
             {% endfor %}
         </table> 
     </form>
