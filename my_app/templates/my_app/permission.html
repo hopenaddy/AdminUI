@@ -1,0 +1,13 @@
+{% extends "my_app/base.html" %}
+
+{% block content %}
+<div class='col-md-4 col-xs-6 col-sm-6 col-lg-4 col-sm-offset-3 col-md-offset-4 col-lg-offset-4' style="text-align:center;">
+	<form action="" method="POST" name="permisssion_form">
+		{% csrf_token %}
+		<h1>Set permission</h1>
+		<h5><input type="radio" name='permission' value='user' checked="checked">User</h5>
+		<h5><input type="radio" name='permission' value='admin'>Admin</h5>
+		<button name="save" class="btn btn-sm btn-success">save</button>
+	</form>
+</div>	
+{% endblock %}
