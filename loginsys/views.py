@@ -3,6 +3,7 @@ from django.contrib import auth
 from django.core.urlresolvers import reverse
 import logging
 import uuid
+import json
 from my_app.models import *
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
@@ -34,6 +35,18 @@ def login(request):
 		args["form"] = new_form		
 	return render(request, 'login.html', args)	
 
+def send_user(user):
+	token=[]
+	for this_user in user.prof.all():
+		token.append(this_user.token)
+	data = {
+		'id' : user.id,
+		'username' : user.username,
+		'fullname' : user.get_full_name(),
+		'token' : token
+		}
+	return HttpResponse(json.dumps(data), content_type = "application/json")
+
 @csrf_exempt
 def authorize(request):
     username = request.POST.get('username', False)
@@ -41,7 +54,7 @@ def authorize(request):
     user = authenticate(username=username, password=password)
     if user is not None:
         auth.login(request, user)
-        return HttpResponse(user)
+        return send_user(user)
     else:
         return HttpResponse("None")			
 
@@ -51,7 +64,6 @@ def auth_check(request):
 	    return HttpResponse("OK")
 	else:
 		return HttpResponse("None")
-	
 
 def logout(request):
 	logger.debug("%s Log Out" % (auth.get_user(request).username))
