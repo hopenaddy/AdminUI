@@ -36,15 +36,16 @@ def login(request):
 	return render(request, 'login.html', args)	
 
 def send_user(user):
-	token=[]
-	for this_user in user.prof.all():
-		token.append(this_user.token)
-	data = {
-		'id' : user.id,
-		'username' : user.username,
-		'fullname' : user.get_full_name(),
-		'token' : token
-		}
+	data = serializers.serialize("json", user)
+	#token=[]
+	#for this_user in user.prof.all():
+	#	token.append(this_user.token)
+	#data = {
+	#	'id' : user.id,
+	#	'username' : user.username,
+	#	'fullname' : user.get_full_name(),
+	#	'token' : token
+	#	}
 	return HttpResponse(json.dumps(data), content_type = "application/json")
 
 @csrf_exempt
