@@ -46,7 +46,7 @@ def send_user(user):
 	#	'fullname' : user.get_full_name(),
 	#	'token' : token
 	#	}
-	return HttpResponse(json.dumps(data), content_type = "application/json")
+	return HttpResponse(data, content_type = "application/json")
 
 @csrf_exempt
 def authorize(request):
