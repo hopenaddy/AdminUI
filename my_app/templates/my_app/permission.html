@@ -5,8 +5,7 @@
 	<form action="" method="POST" name="permisssion_form">
 		{% csrf_token %}
 		<h1>Set permission</h1>
-		<h5><input type="radio" name='permission' value='user' checked="checked">User</h5>
-		<h5><input type="radio" name='permission' value='admin'>Admin</h5>
+		<h5>{{ form }}</h5>
 		<button name="save" class="btn btn-sm btn-success">save</button>
 	</form>
 </div>	

@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from my_app.models import *
+from my_app.forms import PermissionForm
 from loginsys.views import add_token
 from django.core.urlresolvers import reverse
 import uuid
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Permission
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required, permission_required
 import logging
@@ -54,13 +55,12 @@ def edit(request, id):
 @permission_required("auth.change_permission")        
 def permission(request, id):
     user=User.objects.get(id=id)
+    args={}
+    args['form'] = PermissionForm()
     if "save" in request.POST:
-        if request.POST['permission']=='admin':
-            user.user_permissions.add(5,11,12,10)
-            user.save()
-            return redirect('index')
-        else:
-            user.user_permissions.remove(5,11,12,10)
-            user.save()
-            return redirect('index')    
-    return render(request, 'my_app/permission.html')        
+        user.user_permissions.clear()
+        for a in request.POST:
+            if Permission.objects.filter(codename=str(a)):
+                user.user_permissions.add(Permission.objects.get(codename=str(a)))
+        return redirect('index') 
+    return render(request, 'my_app/permission.html', args)        

@@ -19,7 +19,6 @@ def add_token(id):
 	profile.user_id=id 
 	profile.token = uuid.uuid4()
 	profile.save()
-	
 
 def login(request):
 	args ={}
@@ -80,6 +79,8 @@ def registration(request):
 			new_user=auth.authenticate(username=new_form.cleaned_data['username'], password=new_form.cleaned_data['password2'])
 			id=new_user.id
 			add_token(id)
+			msg = Msg(user=new_user)
+			msg.save()
 			if request.user.is_authenticated():
 				logger.debug("%s creat user login= %s" % (request.user.username, new_user.username))
 				return redirect(reverse('index'))
