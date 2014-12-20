@@ -34,6 +34,7 @@ def login(request):
 		args["form"] = new_form		
 	return render(request, 'login.html', args)	
 
+@csrf_exempt
 def send_user(user):
 	token=[]
 	for this_user in user.prof.all():
