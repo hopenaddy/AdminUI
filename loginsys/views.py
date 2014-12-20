@@ -32,9 +32,12 @@ def login(request):
 			logger.debug("%s SignIn" % (auth.get_user(request).username))
 			return redirect(redirect_to)
 		args["form"] = new_form		
-	return render(request, 'login.html', args)	
-
+	return render(request, 'login.html', args)
+		
 @csrf_exempt
+def get_data(request):
+	return send_user(request.user)
+
 def send_user(user):
 	token=[]
 	for this_user in user.prof.all():
