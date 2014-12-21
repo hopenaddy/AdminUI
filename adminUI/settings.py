@@ -61,15 +61,15 @@ WSGI_APPLICATION = 'adminUI.wsgi.application'
 
 DATABASES = {
      'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': "yaps",
-        # 'HOST':"127.0.0.1",
-        # 'USER':"root",
-        # 'PASSWORD':"",
-        # 'TEST_MIRROR': 'default'
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "yaps",
+        'HOST':"127.0.0.1",
+        'USER':"root",
+        'PASSWORD':"",
         'TEST_MIRROR': 'default'
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'TEST_MIRROR': 'default'
     },
 }
 
@@ -106,14 +106,14 @@ LOGGING  =  {
         'default' :  { 
             'level' :  'DEBUG' , 
             'class' :  'logging.handlers.RotatingFileHandler' , 
-            'filename' :  'log/admin_all_operation.log' ,
+            'filename' :  '/opt/lv128/log/admin_all_operation.log' ,
             'formatter' : 'standard',
 
         },
          'request_handler' :  { 
             'level' :  'WARNING' , 
             'class' :  'logging.FileHandler' , 
-            'filename' :  'log/admin_debug.log' , 
+            'filename' :  '/opt/lv128/log/admin_debug.log' , 
             'formatter' : 'standard',
         }, 
     }, 
