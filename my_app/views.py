@@ -17,15 +17,8 @@ def main_page(request):
 
 @login_required()
 def index(request):
-    check_edit = request.user.has_perm('auth.change_user')
-    edit_perm = request.user.has_perm('auth.change_permission')
     user_list = User.objects.all().order_by('id')
-    context = {
-        'user_list': user_list, 
-        'username': auth.get_user(request).username,
-        'check_edit': check_edit,
-        'edit_perm' : edit_perm
-        }
+    context = {'user_list': user_list}
     if "delete" in request.POST and request.POST['delete'] != "1":
         user_id = request.POST['delete']
         if request.user.has_perm('auth.delete_user') or int(user_id) == request.user.id:
@@ -39,9 +32,11 @@ def edit(request, id):
     if check_perm or request.user.id==int(id):
         user = User.objects.get(id=id)
         if "del" in request.POST:
+            logger.debug("%s lost token - %s" % (user.username, Profile.objects.get(id=request.POST["del"]).token))
             Profile.objects.filter(id=request.POST["del"]).delete()
         if "add" in request.POST:
             add_token(id)
+            logger.debug("%s got new token" % (user.username))
         if "save" in request.POST:
             user.username = request.POST['login']
             user.first_name = request.POST['first']
@@ -56,11 +51,15 @@ def edit(request, id):
 def permission(request, id):
     user=User.objects.get(id=id)
     args={}
-    args['form'] = PermissionForm()
+    initial={'change_permission':False, 'change_user':False, 'add_user':False, 'delete_user':False}
+    for i in initial:
+        initial[i] = user.has_perm('auth.' + i)  
+    args['form'] = PermissionForm(initial)
     if "save" in request.POST:
         user.user_permissions.clear()
         for a in request.POST:
             if Permission.objects.filter(codename=str(a)):
                 user.user_permissions.add(Permission.objects.get(codename=str(a)))
+        logger.debug("%s changed permissions for %s" % (auth.get_user(request).username, user.username))
         return redirect('index') 
     return render(request, 'my_app/permission.html', args)        

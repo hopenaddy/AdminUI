@@ -21,7 +21,7 @@ class Msg(models.Model):
 		verbose_name_plural = 'Message'
 
 class Permissions(models.Model):
-    add_user = models.BooleanField()
-    change_user = models.BooleanField()
-    delete_user = models.BooleanField()
-    change_permission = models.BooleanField()
+    add_user = models.BooleanField(default = False)
+    change_user = models.BooleanField(default = False)
+    delete_user = models.BooleanField(default = False)
+    change_permission = models.BooleanField(default = False)

@@ -15,7 +15,7 @@
               <td>Failed_msg</td>
             </tr>
             {% for this_user in user_list %}
-               {% if this_user.id == user.id or check_edit %}
+               {% if this_user.id == user.id or perms.auth.delete_user or perms.auth.change_permission or perms.auth.change_user%}
                     <tr>
                         <td>{{ this_user.id }}</td>
                         <td>{{ this_user.username }}</td>
@@ -29,14 +29,20 @@
                         <td>{{ this_user.msg.success_msg_counter }}</td>
                         <td>{{ this_user.msg.failed_msg_counter }}</td>
                         <td>
+                        {% if this_user.id == user.id or perms.auth.change_user%}
                             <a href="edit/{{ this_user.id }}" class="btn btn-sm btn-warning">Edit</a>
+                        {% endif %}
                         </td>
-                        <td><button name="delete" value="{{this_user.id}}" class="btn btn-sm btn-danger">delete</button></td>
-                        {% if edit_perm %}
-                            <td>
-                                <a href="permission/{{ this_user.id }}" class="btn btn-sm btn-warning">Permission</a>
-                            </td>
-                            {% endif %}
+                          <td>
+                        {% if this_user.id == user.id or perms.auth.delete_user %}
+                            <button name="delete" value="{{this_user.id}}" class="btn btn-sm btn-danger">delete</button>
+                        {% endif %}
+                          </td>
+                          <td>
+                        {% if perms.auth.change_permission %}
+                            <a href="permission/{{ this_user.id }}" class="btn btn-sm btn-warning">Permission</a>
+                        {% endif %}
+                          </td>
                     </tr>
                 {% endif %}
             {% endfor %}
@@ -45,7 +51,7 @@
     {% else %}
     <p>No users are available.</p>
     {% endif %}
-  {% if username %}
+  {% if perms.auth.add_user%}
     <a href="/auth/registration" class="btn btn-sm btn-primary" id="is_it_users" >ADD</a>
   {% endif %}
 {% endblock %}
