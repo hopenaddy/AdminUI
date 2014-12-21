@@ -7,13 +7,24 @@
 </head>
 <body>
 <div class="container">
-<div >
-	<div class="panel panel-default">
-		{% if user.username %}
-			<p class="list-unstyled text-right"><a href="/auth/logout/" class="btn btn-sm btn-primary">LogOut ({{ user.username }})</a></p>	
-		{% endif %}	
-	</div>
-</div>
+	<nav class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+	     <div class="navbar-header">
+            <snap class="navbar-brand">YAPS</snap>
+         </div>
+	      <div id="navbar" class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav navbar-right">
+				{%  if user.username %}
+	        		<li><a href="/auth/logout/">Log Of({{ user.username }})</a></li>
+				{%  else %}
+					<li><a href="/auth/login/">Log In</a></li>
+				{% endif %}	
+	        </ul>
+	      </div>
+	    </div>
+	</nav>
+</div>			
+<div class="container">
 {% block content %}{% endblock %}
 </div>
 </body>

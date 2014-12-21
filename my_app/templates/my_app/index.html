@@ -13,6 +13,9 @@
               <td>Total_msg</td>
               <td>Success_msg</td>
               <td>Failed_msg</td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             {% for this_user in user_list %}
                {% if this_user.id == user.id or perms.auth.delete_user or perms.auth.change_permission or perms.auth.change_user%}
