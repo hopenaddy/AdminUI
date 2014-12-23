@@ -1,0 +1,157 @@
+@-moz-keyframes spinningH {
+    from {
+        -moz-transform: rotateX(0deg) rotateZ(0deg);
+    }
+    to{
+        -moz-transform: rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes spinningH {
+    from {
+        -webkit-transform: rotateX(0deg) rotateZ(0deg);
+    }
+    to{
+        -webkit-transform: rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+@-o-keyframes spinningH {
+    from {
+        -o-transform: rotateX(0deg) rotateZ(0deg);
+    }
+    to{
+        -o-transform: rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+@-ms-keyframes spinningH {
+    from {
+        -ms-transform: rotateX(0deg) rotateZ(0deg);
+    }
+    to{
+        -ms-transform: rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+@keyframes spinningH {
+    from {
+        transform: rotateX(0deg) rotateZ(0deg);
+    }
+    to{
+        transform: rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+.navbar-nav{
+    margin-top: -40px;
+    height: 60px;
+}
+
+#container {
+    -webkit-perspective : 1000px;
+    -moz-perspective    : 1000px;
+    -o-perspective      : 1000px;
+    -ms-perspective     : 1000px;
+    perspective         : 1000px;
+
+    -webkit-perspective-origin  : 50% 50%;
+    -moz-perspective-origin     : 50% 50%;
+    -moz-transform-origin       : 50% 50%;
+    -o-perspective-origin       : 50% 50%;
+    -ms-perspective-origin      : 50% 50%;
+    perspective-origin          : 50% 50%;
+}
+
+.animate {
+    -webkit-animation : spinningH 6s infinite linear;
+    -moz-animation    : spinningH 6s infinite linear;
+    -o-animation      : spinningH 6s infinite linear;
+    -ms-animation     : spinningH 6s infinite linear;
+    animation         : spinningH 6s infinite linear;
+}
+
+#cube {
+    position: relative;
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+    font-size: 3em;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4);
+
+
+    -webkit-transform-style : preserve-3d;
+    -moz-transform-style    : preserve-3d;
+    -o-transform-style      : preserve-3d;
+    -ms-transform-style     : preserve-3d;
+    transform-style         : preserve-3d;
+}
+
+#cube>div {
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    border: solid 2px #ffffff;
+    border-radius: 2px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    opacity: 0.9;
+    background-position:center center;
+}
+
+#cube div:nth-child(1) {
+    -webkit-transform : translateZ(20px);
+    -moz-transform    : translateZ(20px);
+    -o-transform      : translateZ(20px);
+    -ms-transform     : translateZ(20px);
+    transform         : translateZ(20px);
+    background-color  : #2E272F;
+}
+
+#cube div:nth-child(2) {
+    -webkit-transform : rotateY(90deg) translateZ(20px);
+    -moz-transform    : rotateY(90deg) translateZ(20px);
+    -o-transform      : rotateY(90deg) translateZ(20px);
+    -ms-transform     : rotateY(90deg) translateZ(20px);
+    transform         : rotateY(90deg) translateZ(20px);
+    background-color  : #2D3A4D;
+}
+
+#cube div:nth-child(3) {
+    -webkit-transform : rotateY(180deg) translateZ(20px);
+    -moz-transform    : rotateY(180deg) translateZ(20px);
+    -o-transform      : rotateY(180deg) translateZ(20px);
+    -ms-transform     : rotateY(180deg) translateZ(20px);
+    transform         : rotateY(180deg) translateZ(20px);
+    background-color  : #2D1C12;
+}
+
+#cube div:nth-child(4) {
+    -webkit-transform : rotateY(-90deg) translateZ(20px);
+    -moz-transform    : rotateY(-90deg) translateZ(20px);
+    -o-transform      : rotateY(-90deg) translateZ(20px);
+    -ms-transform     : rotateY(-90deg) translateZ(20px);
+    transform         : rotateY(-90deg) translateZ(20px);
+    background-color  : #693C1F;
+}
+
+#cube div:nth-child(5) {
+    -webkit-transform : rotateX(-90deg) translateZ(20px) rotate(180deg);
+    -moz-transform    : rotateX(-90deg) translateZ(20px) rotate(180deg);
+    -o-transform      : rotateX(-90deg) translateZ(20px) rotate(180deg);
+    -ms-transform     : rotateX(-90deg) translateZ(20px) rotate(180deg);
+    transform         : rotateX(-90deg) translateZ(20px) rotate(180deg);
+    background-color  : #955122;
+}
+
+#cube div:nth-child(6)  {
+    -webkit-transform : rotateX(90deg) translateZ(20px);
+    -moz-transform    : rotateX(90deg) translateZ(20px);
+    -o-transform      : rotateX(90deg) translateZ(20px);
+    -ms-transform     : rotateX(90deg) translateZ(20px);
+    transform         : rotateX(90deg) translateZ(20px);
+    background-color  : #E34C26;
+}

@@ -113,7 +113,7 @@ LOGGING  =  {
          'request_handler' :  { 
             'level' :  'WARNING' , 
             'class' :  'logging.FileHandler' , 
-            'filename' :  '/opt/lv128/log/admin_debug.log' , 
+            'filename' :  '/opt/lv128/log/admin_debug.log' ,
             'formatter' : 'standard',
         }, 
     }, 

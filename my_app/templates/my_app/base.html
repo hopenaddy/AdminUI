@@ -8,24 +8,44 @@
 <body>
 <div class="container">
 	<nav class="navbar navbar-default" role="navigation">
-	    <div class="container-fluid">
-	     <div class="navbar-header">
-            <snap class="navbar-brand">YAPS</snap>
-         </div>
-	      <div id="navbar" class="navbar-collapse collapse">
-	        <ul class="nav navbar-nav navbar-right">
+			<div id="cube" class="animate">
+			    <div>Y</div>
+			    <div>A</div>
+			    <div>P</div>
+			    <div>S</div>
+			    <div>S</div>
+			    <div>A</div>
+			</div>
+            <!--<div class="navbar-header">-->
+                <!--<snap class="navbar-brand">YAPS</snap>-->
+            <!--</div>-->
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
 				{%  if user.username %}
-	        		<li><a href="/auth/logout/">Sign Out({{ user.username }})</a></li>
+				    <li><a href="/auth/logout/">Sign Out({{ user.username }})</a></li>
 				{%  else %}
-					<li><a href="/auth/login/">Sign In</a></li>
-				{% endif %}	
-	        </ul>
-	      </div>
+				    <li><a href="/auth/login/">Sign In</a></li>
+				{% endif %}
+				</ul>
+			</div>
 	    </div>
 	</nav>
 </div>			
 <div class="container">
 {% block content %}{% endblock %}
 </div>
+<div id="container">
+
+</div>
+    <!--<div id="wrapper">-->
+        <!--<div id="cube">-->
+            <!--<div class="side" id="side1">1</div>-->
+            <!--<div class="side" id="side2">2</div>-->
+            <!--<div class="side" id="side3">3</div>-->
+            <!--<div class="side" id="side4">4</div>-->
+            <!--<div class="side" id="side5">5</div>-->
+            <!--<div class="side" id="side6">6</div>-->
+        <!--</div>-->
+    <!--</div>-->
 </body>
 </html>
