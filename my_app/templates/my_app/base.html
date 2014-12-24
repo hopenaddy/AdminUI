@@ -7,24 +7,27 @@
 </head>
 <body>
 <div class="container">
-	<nav class="navbar navbar-default" role="navigation">
-			<div id="cube" class="animate">
-			    <div>Y</div>
-			    <div>A</div>
-			    <div>P</div>
-			    <div>S</div>
-			    <div>S</div>
-			    <div>A</div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header navbar-brand">
+				<div id="cube" class="animate">
+				    <div>Y</div>
+				    <div>A</div>
+				    <div>P</div>
+				    <div>S</div>
+				    <div>S</div>
+				    <div>A</div>
+				</div>
 			</div>
             <!--<div class="navbar-header">-->
                 <!--<snap class="navbar-brand">YAPS</snap>-->
             <!--</div>-->
-			<div id="navbar" class="navbar-collapse collapse">
+			<div>
 				<ul class="nav navbar-nav navbar-right">
 				{%  if user.username %}
-				    <li><a href="/auth/logout/">Sign Out({{ user.username }})</a></li>
+				    <li><a href="/auth/logout/" class="glyphicon glyphicon-log-out">SignOut({{ user.username }})</a></li>
 				{%  else %}
-				    <li><a href="/auth/login/">Sign In</a></li>
+				    <li><a href="/auth/login/" class="glyphicon glyphicon-log-in">SignIn</a></li>
 				{% endif %}
 				</ul>
 			</div>
