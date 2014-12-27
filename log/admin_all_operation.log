@@ -75,3 +75,30 @@
 2014-12-27 12:32:26,190 [DEBUG] loginsys.views: root SignIn
 2014-12-27 12:33:25,771 [DEBUG] loginsys.views: root Log Out
 2014-12-27 12:37:28,559 [DEBUG] loginsys.views: root SignIn
+2014-12-27 13:02:02,638 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:04,375 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:06,021 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:07,168 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:09,121 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:10,393 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:11,923 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:14,009 [DEBUG] my_app.views: root got new token
+2014-12-27 13:02:18,477 [DEBUG] my_app.views: root lost token - 48fb29f2-fcd1-49fb-8a79-16737eef9dcb
+2014-12-27 13:02:21,065 [DEBUG] my_app.views: root lost token - 2bcf47bb-f73f-45a9-a114-58c657df23d5
+2014-12-27 13:02:22,097 [DEBUG] my_app.views: root lost token - bb6d79b4-5633-4ded-a2c1-a6db18f7c100
+2014-12-27 13:02:22,922 [DEBUG] my_app.views: root lost token - bb1de44d-5f15-4af1-b390-be8b1a1c116a
+2014-12-27 13:02:23,839 [DEBUG] my_app.views: root lost token - 84ba30e6-367f-4e8d-acf8-167f06dd3757
+2014-12-27 13:02:24,823 [DEBUG] my_app.views: root lost token - c4fb6808-c85c-461a-bf98-7e09207192e8
+2014-12-27 13:02:26,466 [DEBUG] my_app.views: root edit user login= root fullname= 
+2014-12-27 13:03:02,443 [DEBUG] loginsys.views: root Log Out
+2014-12-27 13:03:05,537 [DEBUG] loginsys.views: root SignIn
+2014-12-27 13:03:07,757 [DEBUG] loginsys.views: root Log Out
+2014-12-27 13:03:17,181 [DEBUG] loginsys.views: root SignIn
+2014-12-27 13:20:02,957 [DEBUG] loginsys.views: root Log Out
+2014-12-27 13:23:50,575 [DEBUG] loginsys.views: root SignIn
+2014-12-27 13:24:03,650 [DEBUG] loginsys.views: root Log Out
+2014-12-27 13:24:07,141 [DEBUG] loginsys.views: root SignIn
+2014-12-27 13:25:12,117 [DEBUG] my_app.views: root changed permissions for root
+2014-12-27 13:25:13,248 [DEBUG] loginsys.views: root Log Out
+2014-12-27 13:26:08,149 [DEBUG] loginsys.views: root SignIn
+2014-12-27 13:26:19,803 [DEBUG] my_app.views: root edit user login= root fullname= 

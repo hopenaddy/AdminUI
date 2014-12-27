@@ -3,7 +3,7 @@
 {% block content %}
 <div class='col-md-4 col-xs-6 col-sm-6 col-lg-4 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 back_color'>
 	<form action="" method="POST" name="user_form">
-		<table class="table table-striped">
+		<table class="table background_for_table">
 			{% csrf_token %}
             <tr><input class="form-control" type="text" name="login" placeholder="login" value="{{ user.username }}" required></tr>
 			<tr><input class="form-control" type="text" name="first" placeholder="first_name" value="{{ user.first_name }}"></tr>
