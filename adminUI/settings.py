@@ -22,7 +22,7 @@ SECRET_KEY = '+)ze3x_6sds7%vava^g=+xkwrunoh6(%+!dwljb!l(jb4!3np+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -61,15 +61,15 @@ WSGI_APPLICATION = 'adminUI.wsgi.application'
 
 DATABASES = {
      'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': "yaps",
-        'HOST':"127.0.0.1",
-        'USER':"root",
-        'PASSWORD':"",
-        'TEST_MIRROR': 'default'
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': "yaps",
+        # 'HOST':"127.0.0.1",
+        # 'USER':"root",
+        # 'PASSWORD':"",
         # 'TEST_MIRROR': 'default'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'TEST_MIRROR': 'default'
     },
 }
 
@@ -106,14 +106,14 @@ LOGGING  =  {
         'default' :  { 
             'level' :  'DEBUG' , 
             'class' :  'logging.handlers.RotatingFileHandler' , 
-            'filename' :  '/opt/lv128/log/admin_all_operation.log' ,
+            'filename' :  'log/admin_all_operation.log' ,
             'formatter' : 'standard',
 
         },
          'request_handler' :  { 
             'level' :  'WARNING' , 
             'class' :  'logging.FileHandler' , 
-            'filename' :  '/opt/lv128/log/admin_debug.log' ,
+            'filename' :  'log/admin_debug.log' ,
             'formatter' : 'standard',
         }, 
     }, 

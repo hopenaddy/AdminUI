@@ -1,0 +1,77 @@
+2014-12-23 15:02:02,317 [DEBUG] loginsys.views: root Log Out
+2014-12-23 15:02:09,451 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:44:24,974 [DEBUG] loginsys.views: root Log Out
+2014-12-24 12:44:29,894 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:47:11,735 [DEBUG] loginsys.views: root Log Out
+2014-12-24 12:51:19,089 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:52:36,014 [DEBUG] loginsys.views: root Log Out
+2014-12-24 12:52:40,298 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:56:45,659 [DEBUG] loginsys.views: root Log Out
+2014-12-24 12:56:50,775 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:56:52,411 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:56:54,139 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:56:55,736 [DEBUG] loginsys.views: root SignIn
+2014-12-24 12:57:01,859 [DEBUG] loginsys.views: root Log Out
+2014-12-24 12:57:06,715 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:09:44,504 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:09:48,683 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:11:42,422 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:11:46,690 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:12:19,969 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:12:27,959 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:12:39,851 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:12:43,527 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:14:18,735 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:14:22,110 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:16:02,987 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:16:25,571 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:24:24,787 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:24:32,230 [DEBUG] loginsys.views: root SignIn
+2014-12-24 13:24:44,455 [DEBUG] loginsys.views: root Log Out
+2014-12-24 13:24:48,216 [DEBUG] loginsys.views: root SignIn
+2014-12-27 10:36:38,571 [DEBUG] loginsys.views: root Log Out
+2014-12-27 10:36:41,779 [DEBUG] loginsys.views: root SignIn
+2014-12-27 11:20:30,546 [DEBUG] my_app.views: as got new token
+2014-12-27 11:20:31,967 [DEBUG] my_app.views: as got new token
+2014-12-27 11:20:33,373 [DEBUG] my_app.views: as got new token
+2014-12-27 11:20:34,828 [DEBUG] my_app.views: as got new token
+2014-12-27 11:20:36,319 [DEBUG] my_app.views: root edit user login= as fullname= 
+2014-12-27 11:20:41,179 [DEBUG] my_app.views: test got new token
+2014-12-27 11:20:42,359 [DEBUG] my_app.views: test got new token
+2014-12-27 11:20:43,489 [DEBUG] my_app.views: root edit user login= test fullname= 
+2014-12-27 11:20:56,379 [DEBUG] loginsys.views: root creat user login= more
+2014-12-27 11:21:01,568 [DEBUG] my_app.views: more got new token
+2014-12-27 11:21:02,981 [DEBUG] my_app.views: more got new token
+2014-12-27 11:21:04,385 [DEBUG] my_app.views: more got new token
+2014-12-27 11:21:05,657 [DEBUG] my_app.views: more got new token
+2014-12-27 11:21:06,736 [DEBUG] my_app.views: root edit user login= more fullname= 
+2014-12-27 11:21:35,846 [DEBUG] loginsys.views: root creat user login= one_more
+2014-12-27 11:21:39,463 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:40,385 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:41,291 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:42,155 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:43,020 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:44,233 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:45,381 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:46,524 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:47,906 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:49,295 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:51,465 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:54,640 [DEBUG] my_app.views: one_more got new token
+2014-12-27 11:21:58,040 [DEBUG] my_app.views: root edit user login= one_more fullname= 
+2014-12-27 11:22:06,310 [DEBUG] my_app.views: root got new token
+2014-12-27 11:22:07,863 [DEBUG] my_app.views: root got new token
+2014-12-27 11:22:08,926 [DEBUG] my_app.views: root edit user login= root fullname= 
+2014-12-27 11:22:48,289 [DEBUG] my_app.views: root edit user login= one_more fullname= 
+2014-12-27 11:24:05,438 [DEBUG] loginsys.views: root Log Out
+2014-12-27 11:24:09,047 [DEBUG] loginsys.views: root SignIn
+2014-12-27 11:26:23,142 [DEBUG] loginsys.views: root Log Out
+2014-12-27 11:28:57,625 [DEBUG] loginsys.views: root SignIn
+2014-12-27 11:33:35,778 [DEBUG] loginsys.views: root Log Out
+2014-12-27 12:10:17,373 [DEBUG] loginsys.views: root SignIn
+2014-12-27 12:11:20,570 [DEBUG] loginsys.views: root Log Out
+2014-12-27 12:11:30,262 [DEBUG] loginsys.views: root SignIn
+2014-12-27 12:23:14,522 [DEBUG] loginsys.views: root Log Out
+2014-12-27 12:32:26,190 [DEBUG] loginsys.views: root SignIn
+2014-12-27 12:33:25,771 [DEBUG] loginsys.views: root Log Out
+2014-12-27 12:37:28,559 [DEBUG] loginsys.views: root SignIn

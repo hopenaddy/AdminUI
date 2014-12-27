@@ -6,16 +6,16 @@
     {% csrf_token %}
         <table class="table table-striped">
             <tr>
-              <td>Id</td>
-              <td>Login</td>
-              <td>Full_name</td>
-              <td>Token</td>
-              <td>Total_msg</td>
-              <td>Success_msg</td>
-              <td>Failed_msg</td>
-              <td></td>
-              <td></td>
-              <td></td>
+                <td>Id</td>
+                <td>Login</td>
+                <td>Full_name</td>
+                <td>Token</td>
+                <td>Total_msg</td>
+                <td>Success_msg</td>
+                <td>Failed_msg</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             {% for this_user in user_list %}
                {% if this_user.id == user.id or perms.auth.delete_user or perms.auth.change_permission or perms.auth.change_user%}
@@ -36,16 +36,16 @@
                             <a href="edit/{{ this_user.id }}" class="btn btn-sm btn-warning">Edit</a>
                         {% endif %}
                         </td>
-                          <td>
-                        {% if this_user.id == user.id or perms.auth.delete_user %}
-                            <button name="delete" value="{{this_user.id}}" class="btn btn-sm btn-danger">delete</button>
-                        {% endif %}
-                          </td>
-                          <td>
-                        {% if perms.auth.change_permission %}
-                            <a href="permission/{{ this_user.id }}" class="btn btn-sm btn-warning">Permission</a>
-                        {% endif %}
-                          </td>
+                        <td>
+                            {% if this_user.id == user.id or perms.auth.delete_user %}
+                                <button name="delete" value="{{this_user.id}}" class="btn btn-sm btn-danger">delete</button>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if perms.auth.change_permission %}
+                                <a href="permission/{{ this_user.id }}" class="btn btn-sm btn-warning">Permission</a>
+                            {% endif %}
+                        </td>
                     </tr>
                 {% endif %}
             {% endfor %}

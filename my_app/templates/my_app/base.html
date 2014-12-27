@@ -3,52 +3,46 @@
 {% load staticfiles %}
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" href="{% static "css/cub.css" %}">
+	<link rel="stylesheet" href="{% static "css/main.css" %}">
 </head>
 <body>
-<div class="container">
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header navbar-brand">
-				<div id="cube" class="animate">
-				    <div>Y</div>
-				    <div>A</div>
-				    <div>P</div>
-				    <div>S</div>
-				    <div>S</div>
-				    <div>A</div>
-				</div>
-			</div>
-            <!--<div class="navbar-header">-->
-                <!--<snap class="navbar-brand">YAPS</snap>-->
-            <!--</div>-->
-			<div>
-				<ul class="nav navbar-nav navbar-right">
-				{%  if user.username %}
-				    <li><a href="/auth/logout/" class="glyphicon glyphicon-log-out">SignOut({{ user.username }})</a></li>
-				{%  else %}
-				    <li><a href="/auth/login/" class="glyphicon glyphicon-log-in">SignIn</a></li>
-				{% endif %}
-				</ul>
-			</div>
-	    </div>
-	</nav>
-</div>			
-<div class="container">
-{% block content %}{% endblock %}
-</div>
-<div id="container">
-
-</div>
-    <!--<div id="wrapper">-->
-        <!--<div id="cube">-->
-            <!--<div class="side" id="side1">1</div>-->
-            <!--<div class="side" id="side2">2</div>-->
-            <!--<div class="side" id="side3">3</div>-->
-            <!--<div class="side" id="side4">4</div>-->
-            <!--<div class="side" id="side5">5</div>-->
-            <!--<div class="side" id="side6">6</div>-->
-        <!--</div>-->
-    <!--</div>-->
+	<header class="navbar-fixed-top">
+		<div class="container">
+			<nav class="navbar navbar-default back_color">
+				<div class="container-fluid">
+					<a href="/">
+						<div class="navbar-header navbar-brand">
+							<div id="cube" class="animate">
+							    <div>Y</div>
+							    <div>A</div>
+							    <div>P</div>
+							    <div>S</div>
+							    <div>S</div>
+							    <div>A</div>
+							</div>
+						</div>
+					</a>	
+		            <!--<div class="navbar-header">-->
+		                <!--<snap class="navbar-brand">YAPS</snap>-->
+		            <!--</div>-->
+					<div>
+						<ul class="nav navbar-nav navbar-right">
+						{%  if user.username %}
+						    <li><a href="/auth/logout/" class="glyphicon glyphicon-log-out">SignOut({{ user.username }})</a></li>
+						{%  else %}
+						    <li><a href="/auth/login/" class="glyphicon glyphicon-log-in">SignIn</a></li>
+						{% endif %}
+						</ul>
+					</div>
+			    </div>
+			</nav>
+		</div>
+	</header>	
+	<main>
+		<div class="container">
+			{% block content %}{% endblock %}
+		</div>
+	</main>
 </body>
 </html>
