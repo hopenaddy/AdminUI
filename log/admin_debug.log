@@ -10287,3 +10287,37 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 485, in execute
     return Database.Cursor.execute(self, query, params)
 IntegrityError: UNIQUE constraint failed: auth_user.username
+2014-12-28 20:43:22,717 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/lamp/AdminUI/loginsys/views.py", line 81, in registration
+    new_form.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 123, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 591, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 628, in save_base
+    update_fields=update_fields, raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 198, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/alive/lamp/AdminUI/loginsys/signals.py", line 14, in create
+    profile = Profile(user = kwargs["instance"])
+KeyError: 'instance'
+2014-12-28 20:44:32,269 [ERROR] django.request: Internal Server Error: /auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alive/lamp/AdminUI/loginsys/views.py", line 81, in registration
+    new_form.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 123, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 591, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 628, in save_base
+    update_fields=update_fields, raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 198, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/alive/lamp/AdminUI/loginsys/signals.py", line 17, in create
+    msg = Msg(user=kwargs["instance"])
+KeyError: 'instance'

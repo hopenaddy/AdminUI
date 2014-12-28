@@ -261,3 +261,12 @@
 2014-12-28 20:21:45,872 [DEBUG] my_app.views: Alive delete user with id= 47
 2014-12-28 20:21:46,713 [DEBUG] my_app.views: Alive delete user with id= 57
 2014-12-28 20:21:49,928 [DEBUG] my_app.views: Alive delete user with id= 59
+2014-12-28 20:43:14,957 [DEBUG] my_app.views: Alive delete user with id= 59
+2014-12-28 20:45:33,779 [DEBUG] loginsys.views: Alive creat user login= zxce
+2014-12-28 20:45:37,120 [DEBUG] my_app.views: Alive delete user with id= 61
+2014-12-28 20:45:38,159 [DEBUG] my_app.views: Alive delete user with id= 60
+2014-12-28 20:45:41,525 [DEBUG] my_app.views: zxce got new token
+2014-12-28 20:45:43,597 [DEBUG] my_app.views: Alive edit user login= zxce fullname= 
+2014-12-28 20:45:50,813 [DEBUG] loginsys.views: Alive creat user login= dfs
+2014-12-28 21:07:48,075 [DEBUG] my_app.views: Alive edit user login= dfs fullname= 
+2014-12-28 21:08:50,769 [DEBUG] loginsys.views: Alive creat user login= cxvcx

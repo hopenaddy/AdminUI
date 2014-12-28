@@ -1,4 +1,3 @@
-import uuid
 import json
 import logging
 from my_app.models import *
@@ -38,14 +37,12 @@ def get_data(request):
 	return send_user(request.user)
 
 def send_user(user):
-	token=[]
-	for this_user in user.prof.all():
-		token.append(this_user.token)
+	tokens = [profile.token for profile in user.prof.all()]
 	data = {
 		'id' : user.id,
 		'username' : user.username,
 		'fullname' : user.get_full_name(),
-		'token' : token
+		'token' : tokens
 		}
 	return HttpResponse(json.dumps(data), content_type = "application/json")
 
@@ -80,8 +77,6 @@ def registration(request):
 		if new_form.is_valid():
 			new_form.save()
 			new_user=auth.authenticate(username=new_form.cleaned_data['username'], password=new_form.cleaned_data['password2'])
-			id=new_user.id
-			add_token(id)
 			if request.user.is_authenticated():
 				logger.debug("%s creat user login= %s" % (request.user.username, new_user.username))
 				return redirect(reverse('index'))
