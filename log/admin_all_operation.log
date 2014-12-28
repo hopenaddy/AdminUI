@@ -102,3 +102,48 @@
 2014-12-27 13:25:13,248 [DEBUG] loginsys.views: root Log Out
 2014-12-27 13:26:08,149 [DEBUG] loginsys.views: root SignIn
 2014-12-27 13:26:19,803 [DEBUG] my_app.views: root edit user login= root fullname= 
+2014-12-28 13:00:14,747 [DEBUG] my_app.views: root edit user login= root fullname= 
+2014-12-28 13:00:31,259 [DEBUG] my_app.views: root changed permissions for root
+2014-12-28 13:17:37,974 [DEBUG] my_app.views: root edit user login= test fullname= 
+2014-12-28 13:24:10,984 [DEBUG] my_app.views: root changed permissions for as
+2014-12-28 13:24:15,521 [DEBUG] my_app.views: root changed permissions for root
+2014-12-28 13:24:19,483 [DEBUG] my_app.views: root changed permissions for Alive
+2014-12-28 13:26:50,302 [DEBUG] my_app.views: root edit user login= Alive fullname= Pavlo Levytskyi
+2014-12-28 13:27:40,105 [DEBUG] my_app.views: root edit user login= as fullname= 
+2014-12-28 13:33:53,416 [DEBUG] my_app.views: root changed permissions for as
+2014-12-28 13:34:01,371 [DEBUG] my_app.views: root changed permissions for Alive
+2014-12-28 13:34:15,267 [DEBUG] loginsys.views: root Log Out
+2014-12-28 13:35:46,799 [DEBUG] loginsys.views: root SignIn
+2014-12-28 13:35:48,291 [DEBUG] loginsys.views: root Log Out
+2014-12-28 13:51:04,711 [DEBUG] loginsys.views: root SignIn
+2014-12-28 13:53:49,578 [DEBUG] loginsys.views: root Log Out
+2014-12-28 14:07:31,356 [DEBUG] loginsys.views: root SignIn
+2014-12-28 14:12:51,860 [DEBUG] loginsys.views: root Log Out
+2014-12-28 14:17:45,496 [DEBUG] loginsys.views: root SignIn
+2014-12-28 14:40:06,737 [DEBUG] loginsys.views: root Log Out
+2014-12-28 14:40:36,277 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 14:40:39,018 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 14:47:08,327 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 14:47:21,250 [DEBUG] my_app.views: Alive edit user login= root fullname= 
+2014-12-28 14:47:26,681 [DEBUG] my_app.views: Alive changed permissions for root
+2014-12-28 14:53:15,721 [DEBUG] my_app.views: Alive edit user login= Alive fullname= Pavlo Levytskyi
+2014-12-28 14:53:20,162 [DEBUG] my_app.views: Alive changed permissions for root
+2014-12-28 14:53:25,174 [DEBUG] my_app.views: Alive changed permissions for as
+2014-12-28 14:53:37,100 [DEBUG] my_app.views: Alive edit user login= root fullname= 
+2014-12-28 14:54:03,998 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 14:57:45,439 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 14:57:47,441 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 15:04:15,534 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 15:09:55,908 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 15:10:01,037 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 15:10:21,496 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 15:10:38,854 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 15:11:00,313 [DEBUG] my_app.views: Alive edit user login= one_more fullname= 
+2014-12-28 15:11:29,465 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 15:11:31,305 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 15:12:04,161 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 15:12:10,131 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 15:12:25,497 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 15:12:32,007 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 15:12:37,016 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 15:12:47,086 [DEBUG] loginsys.views: Alive SignIn

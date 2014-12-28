@@ -2,59 +2,66 @@
 
 {% block content %} 
     {% if user_list %}
-    <form action="" method="POST">
-    {% csrf_token %}
-        <table class="table background_for_table">
-            <tr>
-                <td>Id</td>
-                <td>Login</td>
-                <td>Full_name</td>
-                <td>Token</td>
-                <td>Total_msg</td>
-                <td>Success_msg</td>
-                <td>Failed_msg</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            {% for this_user in user_list %}
-               {% if this_user.id == user.id or perms.auth.delete_user or perms.auth.change_permission or perms.auth.change_user%}
+    <form action="" method="POST" class="table-responsive back_color">
+        {% if perms.auth.add_user%}
+            <a href="/auth/registration" class="btn btn-sm btn-primary" id="is_it_users" >ADD</a>
+        {% endif %}
+        {% csrf_token %}
+            <table class="table table-hover">
+                <thead>
                     <tr>
-                        <td>{{ this_user.id }}</td>
-                        <td>{{ this_user.username }}</td>
-                        <td>{{ this_user.get_full_name }}</td>
-                        <td>
-                            {% for profile in this_user.prof.all %}
-                                {{ profile.token }}<br/>
-                            {% endfor %}
-                        </td>
-                        <td>{{ this_user.msg.total_msg_counter }}</td>
-                        <td>{{ this_user.msg.success_msg_counter }}</td>
-                        <td>{{ this_user.msg.failed_msg_counter }}</td>
-                        <td>
-                        {% if this_user.id == user.id or perms.auth.change_user%}
-                            <a href="edit/{{ this_user.id }}" class="btn btn-sm btn-warning">Edit</a>
-                        {% endif %}
-                        </td>
-                        <td>
-                            {% if this_user.id == user.id or perms.auth.delete_user %}
-                                <button name="delete" value="{{this_user.id}}" class="btn btn-sm btn-danger">delete</button>
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if perms.auth.change_permission %}
-                                <a href="permission/{{ this_user.id }}" class="btn btn-sm btn-warning">Permission</a>
-                            {% endif %}
-                        </td>
+                        <td>Id</td>
+                        <td>Login</td>
+                        <td>Full_name</td>
+                        <td>Token</td>
+                        <td>Total_msg</td>
+                        <td>Success_msg</td>
+                        <td>Failed_msg</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
-                {% endif %}
-            {% endfor %}
-        </table> 
-    </form>
+                </thead>
+                <tbody>
+                    {% for this_user in user_list %}
+                       {% if this_user.id == user.id or perms.auth.delete_user or perms.auth.change_permission or perms.auth.change_user%}
+                            <tr>
+                                <td>{{ this_user.id }}</td>
+                                <td>{{ this_user.username }}</td>
+                                <td>{{ this_user.get_full_name }}</td>
+                                <td>
+                                    {% for profile in this_user.prof.all %}
+                                        {{ profile.token }}<br/>
+                                    {% endfor %}
+                                </td>
+                                <td>{{ this_user.msg.total_msg_counter }}</td>
+                                <td>{{ this_user.msg.success_msg_counter }}</td>
+                                <td>{{ this_user.msg.failed_msg_counter }}</td>
+                                <td>
+                                {% if this_user.id == user.id or perms.auth.change_user%}
+                                    <a href="edit/{{ this_user.id }}" class="btn btn-sm btn-warning">Edit</a>
+                                {% endif %}
+                                </td>
+                                <td>
+                                    {% if this_user.id == user.id or perms.auth.delete_user %}
+                                        <button name="delete" value="{{this_user.id}}" class="btn btn-sm btn-danger">delete</button>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if perms.auth.change_permission %}
+                                        <a href="permission/{{ this_user.id }}" class="btn btn-sm btn-warning">Permission</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table> 
     {% else %}
-    <p>No users are available.</p>
+        <p>No users are available.</p>
     {% endif %}
-  {% if perms.auth.add_user%}
-    <a href="/auth/registration" class="btn btn-sm btn-primary" id="is_it_users" >ADD</a>
-  {% endif %}
+    {% if perms.auth.add_user%}
+        <a href="/auth/registration" class="btn btn-sm btn-primary" id="is_it_users" >ADD</a>
+    {% endif %}
+    </form>
 {% endblock %}

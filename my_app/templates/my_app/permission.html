@@ -1,14 +1,13 @@
 {% extends "my_app/base.html" %}
+{% load bootstrap %}
 
 {% block content %}
-<div class='col-md-4 col-xs-6 col-sm-6 col-lg-4 col-sm-offset-3 col-md-offset-4 col-lg-offset-4'>
+<div class='col-md-4 col-xs-6 col-sm-6 col-lg-4 col-sm-offset-3 col-xs-offset-3 col-md-offset-4 col-lg-offset-4 back_color'>
 	<form action="" method="POST" name="permisssion_form">
 		{% csrf_token %}
-		<table class="table background_for_table">
-			<caption>Set permission</caption>
-			{{ form }}
-			<tr><th></th><td><button name="save" class="btn btn-sm btn-success">save</button></td></tr>
-		</table>
+		<h2>"{{ name }}" has permission:</h2>
+		{{ form|bootstrap }}
+		<button name="save" class="btn btn-sm btn-success">save</button>
 	</form>
 </div>	
 {% endblock %}

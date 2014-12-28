@@ -1,22 +1,18 @@
 {% extends "my_app/base.html" %}
+{% load bootstrap %}
 
 {% block content %}
-<div class='row'>
-    <div id="signin" class="back_color">
-        <form method="post">
-            <div class="auth-form-header"> 
-                <h1>Sign In</h1>
-            </div>
+    <div class='col-md-4 col-xs-8 col-sm-6 col-lg-4 col-sm-offset-3 col-xs-offset-2 col-md-offset-4 col-lg-offset-4 back_color'>
+        <form method="post" name="sign-in">
+            <h1>Sign In</h1>
         	{% csrf_token %}
-            <div class="auth-form-body">
-            	<table class="table background_for_table">
-            	{{form}}
-            	<tr><th><button class="btn btn-sm btn-primary btn-block" name="sing_in" type="submit">Sign in</button> 
-            	</th><th><a class="btn btn-sm btn-primary btn-block" href="../registration">Registration</a> 
-                </th></tr>
-            	</table>
-            </div>    
+        	{{form|bootstrap_horizontal:'col-lg-4'}}
+            <div class="col-lg-8">
+            	<button class="btn btn-sm btn-primary btn-block" name="sing_in" type="submit">Sign in</button> 
+            </div>
+            <div class="col-lg-4">
+            	<a class="col-lg-4 btn btn-sm btn-primary btn-block" href="../registration">Registration</a> 
+            </div>
         </form>
     </div>
-</div>        
 {% endblock %}

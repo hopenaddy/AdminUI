@@ -16,10 +16,14 @@ body{
 }
 
 .back_color{
-	background-color: rgba(247, 229, 106, 0.63);
+	background-color: rgba(255, 255, 253, 0.85);
 	border-radius: 5px;
 	border: 0px;
 }
-.background_for_table{
-	background-color: rgba(255, 255, 255, 0.91);
+form[name="sign-in"]>div{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+a[id="is_it_users"]{
+	margin: 10px;
 }
