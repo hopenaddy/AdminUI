@@ -1,5 +1,18 @@
+body{
+	background: url(../img/garland-lights-new-year-hd-wallpaper.jpg) no-repeat fixed;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
 main{
 	padding-top: 100px;
+}
+
+.back_color{
+	background-color: rgba(255, 255, 253, 0.85);
+	border-radius: 5px;
+	border: 0px;
 }
 
 #signin{
@@ -8,22 +21,11 @@ main{
 	padding: 10px;
 }
 
-body{
-	background: url(../img/garland-lights-new-year-hd-wallpaper.jpg) no-repeat fixed;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-}
-
-.back_color{
-	background-color: rgba(255, 255, 253, 0.85);
-	border-radius: 5px;
-	border: 0px;
-}
 form[name="sign-in"]>div{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
 a[id="is_it_users"]{
 	margin: 10px;
 }

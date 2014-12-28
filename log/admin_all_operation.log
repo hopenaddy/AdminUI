@@ -149,3 +149,115 @@
 2014-12-28 15:12:47,086 [DEBUG] loginsys.views: Alive SignIn
 2014-12-28 17:11:16,625 [DEBUG] loginsys.views: Alive SignIn
 2014-12-28 17:11:23,232 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 17:20:57,066 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 17:21:02,647 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 17:21:07,411 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 18:38:18,934 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 18:38:22,805 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 18:38:25,940 [DEBUG] my_app.views: Alive changed permissions for test
+2014-12-28 18:38:36,154 [DEBUG] my_app.views: Alive changed permissions for as
+2014-12-28 18:43:04,105 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 18:44:16,377 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 18:47:43,079 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 18:47:47,824 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 18:47:51,491 [DEBUG] my_app.views: Alive changed permissions for Alive
+2014-12-28 19:02:54,856 [DEBUG] loginsys.views: Alive creat user login= a
+2014-12-28 19:03:28,530 [DEBUG] my_app.views: Alive edit user login= one_more fullname= 
+2014-12-28 19:03:59,206 [DEBUG] loginsys.views: Alive creat user login= b
+2014-12-28 19:04:45,295 [DEBUG] my_app.views: Alive edit user login= a fullname= 
+2014-12-28 19:05:49,939 [DEBUG] loginsys.views: Alive creat user login= c
+2014-12-28 19:05:56,083 [DEBUG] my_app.views: Alive edit user login= c fullname= 
+2014-12-28 19:07:23,566 [DEBUG] my_app.views: Alive edit user login= b fullname= 
+2014-12-28 19:09:33,849 [DEBUG] my_app.views: Alive edit user login= b fullname= 
+2014-12-28 19:10:21,260 [DEBUG] my_app.views: Alive edit user login= as fullname= 
+2014-12-28 19:10:37,582 [DEBUG] my_app.views: Alive edit user login= as fullname= 
+2014-12-28 19:11:25,165 [DEBUG] my_app.views: Alive edit user login= test fullname= 
+2014-12-28 19:11:48,540 [DEBUG] my_app.views: Alive edit user login= c fullname= 
+2014-12-28 19:12:00,107 [DEBUG] loginsys.views: Alive creat user login= d
+2014-12-28 19:12:15,114 [DEBUG] my_app.views: Alive edit user login= d fullname= 
+2014-12-28 19:16:17,775 [DEBUG] loginsys.views: Alive creat user login= sig
+2014-12-28 19:17:35,636 [DEBUG] my_app.views: Alive edit user login= sig fullname= 
+2014-12-28 19:18:11,152 [DEBUG] loginsys.views: Alive creat user login= some
+2014-12-28 19:20:02,169 [DEBUG] my_app.views: Alive edit user login= some fullname= 
+2014-12-28 19:20:41,610 [DEBUG] my_app.views: Alive edit user login= some fullname= 
+2014-12-28 19:21:03,659 [DEBUG] my_app.views: Alive edit user login= some fullname= 
+2014-12-28 19:21:14,442 [DEBUG] loginsys.views: Alive creat user login= qwe
+2014-12-28 19:22:20,576 [DEBUG] my_app.views: Alive edit user login= qwe fullname= 
+2014-12-28 19:22:39,013 [DEBUG] my_app.views: Alive edit user login= qwe fullname= 
+2014-12-28 19:22:43,857 [DEBUG] my_app.views: Alive edit user login= qwe fullname= 
+2014-12-28 19:29:42,844 [DEBUG] my_app.views: Alive edit user login= qwe fullname= 
+2014-12-28 19:29:48,683 [DEBUG] my_app.views: Alive edit user login= qwe fullname= 
+2014-12-28 19:29:59,265 [DEBUG] loginsys.views: Alive creat user login= ne
+2014-12-28 19:30:50,895 [DEBUG] my_app.views: Alive delete user with id= 39
+2014-12-28 19:30:55,037 [DEBUG] my_app.views: Alive delete user with id= 32
+2014-12-28 19:30:57,725 [DEBUG] my_app.views: Alive delete user with id= 36
+2014-12-28 19:31:02,381 [DEBUG] my_app.views: Alive delete user with id= 38
+2014-12-28 19:31:04,242 [DEBUG] my_app.views: Alive delete user with id= 33
+2014-12-28 19:31:05,771 [DEBUG] my_app.views: Alive delete user with id= 31
+2014-12-28 19:31:06,891 [DEBUG] my_app.views: Alive delete user with id= 34
+2014-12-28 19:31:07,803 [DEBUG] my_app.views: Alive delete user with id= 35
+2014-12-28 19:31:08,568 [DEBUG] my_app.views: Alive delete user with id= 37
+2014-12-28 19:31:15,244 [DEBUG] loginsys.views: Alive creat user login= a
+2014-12-28 19:32:02,803 [DEBUG] loginsys.views: Alive creat user login= s
+2014-12-28 19:32:10,884 [DEBUG] my_app.views: Alive edit user login= a fullname= 
+2014-12-28 19:32:44,314 [DEBUG] my_app.views: Alive edit user login= s fullname= 
+2014-12-28 19:32:50,226 [DEBUG] my_app.views: Alive edit user login= a fullname= 
+2014-12-28 19:33:05,071 [DEBUG] my_app.views: Alive edit user login= more fullname= 
+2014-12-28 19:33:18,435 [DEBUG] loginsys.views: Alive creat user login= w
+2014-12-28 19:33:49,505 [DEBUG] my_app.views: Alive edit user login= w fullname= 
+2014-12-28 19:34:04,814 [DEBUG] loginsys.views: Alive creat user login= aw
+2014-12-28 19:34:44,798 [DEBUG] my_app.views: Alive edit user login= aw fullname= 
+2014-12-28 19:34:48,756 [DEBUG] my_app.views: Alive edit user login= a fullname= 
+2014-12-28 19:36:12,971 [DEBUG] my_app.views: Alive edit user login= w fullname= 
+2014-12-28 19:36:18,697 [DEBUG] my_app.views: Alive edit user login= as fullname= 
+2014-12-28 19:38:33,181 [DEBUG] my_app.views: Alive edit user login= a fullname= 
+2014-12-28 19:38:39,717 [DEBUG] my_app.views: Alive edit user login= as fullname= 
+2014-12-28 19:41:49,324 [DEBUG] my_app.views: Alive delete user with id= 42
+2014-12-28 19:41:51,206 [DEBUG] my_app.views: Alive delete user with id= 44
+2014-12-28 19:42:38,537 [DEBUG] my_app.views: Alive delete user with id= 45
+2014-12-28 19:42:45,812 [DEBUG] loginsys.views: Alive creat user login= a1
+2014-12-28 19:43:29,970 [DEBUG] my_app.views: Alive edit user login= a1 fullname= 
+2014-12-28 19:43:38,036 [DEBUG] loginsys.views: Alive creat user login= a2
+2014-12-28 19:44:36,461 [DEBUG] loginsys.views: Alive creat user login= d
+2014-12-28 19:46:01,209 [DEBUG] loginsys.views: Alive creat user login= f
+2014-12-28 19:50:33,246 [DEBUG] my_app.views: Alive edit user login= f fullname= 
+2014-12-28 19:53:49,209 [DEBUG] my_app.views: Alive edit user login= d fullname= 
+2014-12-28 19:54:53,364 [DEBUG] my_app.views: Alive edit user login= f fullname= 
+2014-12-28 19:55:46,077 [DEBUG] my_app.views: Alive edit user login= f fullname= 
+2014-12-28 19:55:48,961 [DEBUG] my_app.views: Alive delete user with id= 49
+2014-12-28 19:55:55,638 [DEBUG] loginsys.views: Alive creat user login= f
+2014-12-28 19:57:00,256 [DEBUG] my_app.views: Alive edit user login= f fullname= 
+2014-12-28 19:57:03,370 [DEBUG] my_app.views: Alive delete user with id= 50
+2014-12-28 19:57:10,115 [DEBUG] loginsys.views: Alive creat user login= f
+2014-12-28 19:57:45,541 [DEBUG] my_app.views: Alive edit user login= f fullname= 
+2014-12-28 19:57:59,271 [DEBUG] loginsys.views: Alive creat user login= dw
+2014-12-28 19:58:51,475 [DEBUG] my_app.views: Alive edit user login= dw fullname= 
+2014-12-28 19:59:50,995 [DEBUG] my_app.views: Alive edit user login= d fullname= 
+2014-12-28 19:59:59,948 [DEBUG] loginsys.views: Alive creat user login= w
+2014-12-28 20:00:34,447 [DEBUG] loginsys.views: Alive creat user login= c
+2014-12-28 20:02:46,052 [DEBUG] my_app.views: Alive delete user with id= 54
+2014-12-28 20:02:48,016 [DEBUG] my_app.views: Alive delete user with id= 51
+2014-12-28 20:02:49,420 [DEBUG] my_app.views: Alive delete user with id= 52
+2014-12-28 20:02:50,727 [DEBUG] my_app.views: Alive delete user with id= 48
+2014-12-28 20:02:52,180 [DEBUG] my_app.views: Alive delete user with id= 53
+2014-12-28 20:04:15,678 [DEBUG] my_app.views: Alive delete user with id= 56
+2014-12-28 20:04:17,511 [DEBUG] my_app.views: Alive delete user with id= 55
+2014-12-28 20:05:59,404 [DEBUG] my_app.views: Alive edit user login= a2 fullname= 
+2014-12-28 20:10:03,688 [DEBUG] loginsys.views: Alive creat user login= sdf
+2014-12-28 20:17:19,347 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 20:17:26,803 [DEBUG] loginsys.views: Alive creat user login= cv
+2014-12-28 20:17:31,917 [DEBUG] my_app.views: Alive edit user login= sdf fullname= 
+2014-12-28 20:17:59,497 [DEBUG] my_app.views: Alive edit user login= sdf fullname= 
+2014-12-28 20:18:24,956 [DEBUG] my_app.views: Alive edit user login= a1 fullname= 
+2014-12-28 20:20:19,767 [DEBUG] my_app.views: Alive edit user login= sdf fullname= 
+2014-12-28 20:20:30,743 [DEBUG] loginsys.views: Alive creat user login= cvsa
+2014-12-28 20:21:26,929 [DEBUG] my_app.views: Alive edit user login= cvsa fullname= 
+2014-12-28 20:21:38,655 [DEBUG] loginsys.views: Alive creat user login= dsdf
+2014-12-28 20:21:41,749 [DEBUG] my_app.views: Alive delete user with id= 58
+2014-12-28 20:21:42,966 [DEBUG] my_app.views: Alive delete user with id= 40
+2014-12-28 20:21:43,956 [DEBUG] my_app.views: Alive delete user with id= 41
+2014-12-28 20:21:44,582 [DEBUG] my_app.views: Alive delete user with id= 43
+2014-12-28 20:21:45,304 [DEBUG] my_app.views: Alive delete user with id= 46
+2014-12-28 20:21:45,872 [DEBUG] my_app.views: Alive delete user with id= 47
+2014-12-28 20:21:46,713 [DEBUG] my_app.views: Alive delete user with id= 57
+2014-12-28 20:21:49,928 [DEBUG] my_app.views: Alive delete user with id= 59

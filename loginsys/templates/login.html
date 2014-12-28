@@ -7,10 +7,10 @@
             <h1>Sign In</h1>
         	{% csrf_token %}
         	{{form|bootstrap_horizontal:'col-lg-4'}}
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-7">
             	<button class="btn btn-sm btn-primary btn-block" name="sing_in" type="submit">Sign in</button> 
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-5">
             	<a class="btn btn-sm btn-primary btn-block" href="../registration">Registration</a> 
             </div>
         </form>

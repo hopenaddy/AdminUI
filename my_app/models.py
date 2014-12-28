@@ -16,12 +16,7 @@ class Msg(models.Model):
 	total_msg_counter = models.IntegerField(default=0)
 	success_msg_counter = models.IntegerField(default=0)
 	failed_msg_counter = models.IntegerField(default=0)
+
 	class Meta:
 		verbose_name = 'Messages'
 		verbose_name_plural = 'Message'
-
-class Permissions(models.Model):
-    add_user = models.BooleanField(default = False)
-    change_user = models.BooleanField(default = False)
-    delete_user = models.BooleanField(default = False)
-    change_permission = models.BooleanField(default = False)

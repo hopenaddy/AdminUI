@@ -1,8 +1,8 @@
 from django import forms
-from my_app.models import Permissions
 
 
-class PermissionForm(forms.ModelForm):
-
-    class Meta:
-        model = Permissions
+class PermissionForm(forms.Form):
+	add_user = forms.BooleanField(required = False)
+	change_user = forms.BooleanField(required = False)
+	delete_user = forms.BooleanField(required = False)
+	change_permission = forms.BooleanField(required = False)

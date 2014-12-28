@@ -1,13 +1,13 @@
-from django.shortcuts import render, redirect
-from my_app.models import *
-from my_app.forms import PermissionForm
-from loginsys.views import add_token
-from django.core.urlresolvers import reverse
 import uuid
-from django.contrib.auth.models import User, Permission
-from django.contrib import auth
-from django.contrib.auth.decorators import login_required, permission_required
 import logging
+from my_app.models import *
+from django.contrib import auth
+from loginsys.views import add_token
+from my_app.forms import PermissionForm
+from django.core.urlresolvers import reverse
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User, Permission
+from django.contrib.auth.decorators import login_required, permission_required
 
 
 logger=logging.getLogger(__name__)

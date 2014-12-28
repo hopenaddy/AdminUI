@@ -1,15 +1,15 @@
-from django.shortcuts import render, redirect
-from django.contrib import auth
-from django.core.urlresolvers import reverse
-import logging
 import uuid
 import json
+import logging
 from my_app.models import *
-from django.contrib.auth import authenticate
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.contrib.auth.models import User
-from django.views.decorators.csrf import csrf_exempt
+from django.contrib import auth
 from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.core.urlresolvers import reverse
+from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 
 logger=logging.getLogger(__name__)
@@ -23,7 +23,6 @@ def add_token(id):
 def login(request):
 	args ={}
 	redirect_to = request.REQUEST.get('next', '/')
-	
 	args["form"] = AuthenticationForm()
 	if "sing_in" in request.POST:
 		new_form=AuthenticationForm(data=request.POST)
@@ -83,8 +82,6 @@ def registration(request):
 			new_user=auth.authenticate(username=new_form.cleaned_data['username'], password=new_form.cleaned_data['password2'])
 			id=new_user.id
 			add_token(id)
-			msg = Msg(user=new_user)
-			msg.save()
 			if request.user.is_authenticated():
 				logger.debug("%s creat user login= %s" % (request.user.username, new_user.username))
 				return redirect(reverse('index'))
