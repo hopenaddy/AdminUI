@@ -37,7 +37,7 @@ def get_data(request):
 	return send_user(request.user)
 
 def send_user(user):
-	tokens = [profile.token for profile in user.prof.all()]
+	tokens = user.prof.values_list('token', flat=True)
 	data = {
 		'id' : user.id,
 		'username' : user.username,
