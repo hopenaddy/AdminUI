@@ -10321,3 +10321,14 @@ Traceback (most recent call last):
   File "/home/alive/lamp/AdminUI/loginsys/signals.py", line 17, in create
     msg = Msg(user=kwargs["instance"])
 KeyError: 'instance'
+2014-12-28 21:47:54,684 [WARNING] django.request: Not Found: /static/css/cub.css
+2014-12-28 21:47:54,686 [WARNING] django.request: Not Found: /static/css/main.css
+2014-12-28 21:53:29,494 [WARNING] django.request: Not Found: /static/css/cub.css
+2014-12-28 21:53:29,503 [WARNING] django.request: Not Found: /static/css/main.css
+2014-12-28 21:53:32,961 [WARNING] django.request: Not Found: /static/css/cub.css
+2014-12-28 21:53:32,971 [WARNING] django.request: Not Found: /static/css/main.css
+2014-12-28 21:53:34,490 [WARNING] django.request: Not Found: /static/css/cub.css
+2014-12-28 21:53:34,497 [WARNING] django.request: Not Found: /static/css/main.css
+2014-12-28 21:53:39,867 [WARNING] django.request: Not Found: /static/css/cub.css
+2014-12-28 21:53:39,874 [WARNING] django.request: Not Found: /static/css/main.css
+2014-12-28 22:00:34,022 [WARNING] django.request: Not Found: /favicon.ico
