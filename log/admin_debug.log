@@ -169,3 +169,5 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 344, in invalid_block_tag
     raise self.error(token, "Invalid block tag: '%s'" % command)
 TemplateSyntaxError: Invalid block tag: 'endblock'
+2014-12-28 17:02:29,988 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-28 17:02:30,001 [WARNING] django.request: Not Found: /favicon.ico

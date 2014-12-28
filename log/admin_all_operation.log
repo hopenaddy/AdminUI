@@ -147,3 +147,5 @@
 2014-12-28 15:12:32,007 [DEBUG] loginsys.views: Alive SignIn
 2014-12-28 15:12:37,016 [DEBUG] loginsys.views: Alive Log Out
 2014-12-28 15:12:47,086 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 17:11:16,625 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 17:11:23,232 [DEBUG] loginsys.views: Alive Log Out
