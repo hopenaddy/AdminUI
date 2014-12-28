@@ -1,5 +1,5 @@
-import json
 import uuid
+import json
 import logging
 from my_app.models import *
 from django.contrib import auth
@@ -38,7 +38,7 @@ def get_data(request):
 	return send_user(request.user)
 
 def send_user(user):
-	tokens = user.prof.values_list('token', flat=True)
+	tokens=[profile.token for profile in user.prof.all()]
 	data = {
 		'id' : user.id,
 		'username' : user.username,

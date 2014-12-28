@@ -10354,3 +10354,4 @@ Traceback (most recent call last):
   File "/home/alive/lamp/AdminUI/loginsys/views.py", line 19, in add_token
     profile.token = uuid.uuid4()
 NameError: global name 'uuid' is not defined
+2014-12-28 23:14:41,095 [WARNING] django.request: Not Found: /auth/test/

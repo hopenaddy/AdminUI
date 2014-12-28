@@ -280,3 +280,22 @@
 2014-12-28 22:10:39,977 [DEBUG] my_app.views: Alive edit user login= Alive fullname= Pavlo Levytskyi
 2014-12-28 22:10:50,241 [DEBUG] my_app.views: Alive changed permissions for more
 2014-12-28 22:10:58,078 [DEBUG] my_app.views: Alive changed permissions for more
+2014-12-28 23:14:46,429 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 23:14:52,901 [DEBUG] my_app.views: Alive changed permissions for sdfe
+2014-12-28 23:14:58,473 [DEBUG] my_app.views: test got new token
+2014-12-28 23:14:59,594 [DEBUG] my_app.views: Alive edit user login= test fullname= 
+2014-12-28 23:15:01,823 [DEBUG] my_app.views: Alive delete user with id= 64
+2014-12-28 23:15:03,049 [DEBUG] my_app.views: Alive delete user with id= 62
+2014-12-28 23:15:03,861 [DEBUG] my_app.views: Alive delete user with id= 63
+2014-12-28 23:15:04,458 [DEBUG] my_app.views: Alive delete user with id= 65
+2014-12-28 23:15:04,836 [DEBUG] my_app.views: Alive delete user with id= 66
+2014-12-28 23:15:05,206 [DEBUG] my_app.views: Alive delete user with id= 67
+2014-12-28 23:15:12,196 [DEBUG] loginsys.views: Alive creat user login= sa
+2014-12-28 23:15:19,077 [DEBUG] my_app.views: sa got new token
+2014-12-28 23:15:19,997 [DEBUG] my_app.views: sa got new token
+2014-12-28 23:15:20,870 [DEBUG] my_app.views: Alive edit user login= sa fullname= 
+2014-12-28 23:16:11,368 [DEBUG] loginsys.views: Alive Log Out
+2014-12-28 23:16:23,303 [DEBUG] loginsys.views: Alive SignIn
+2014-12-28 23:16:31,105 [DEBUG] my_app.views: sa got new token
+2014-12-28 23:16:32,205 [DEBUG] my_app.views: Alive edit user login= sa fullname= 
+2014-12-28 23:16:50,590 [DEBUG] loginsys.views: Alive creat user login= fdsdf

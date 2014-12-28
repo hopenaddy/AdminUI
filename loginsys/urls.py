@@ -8,5 +8,4 @@ urlpatterns = patterns('',
     url(r'^check/$', views.auth_check, name='auth_check'),
     url(r'^get_data/$', views.get_data, name='get_data'),
     url(r'^authorize/$', views.authorize, name='authorize')
-
 )    
