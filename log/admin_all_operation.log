@@ -270,3 +270,8 @@
 2014-12-28 20:45:50,813 [DEBUG] loginsys.views: Alive creat user login= dfs
 2014-12-28 21:07:48,075 [DEBUG] my_app.views: Alive edit user login= dfs fullname= 
 2014-12-28 21:08:50,769 [DEBUG] loginsys.views: Alive creat user login= cxvcx
+2014-12-28 21:39:06,321 [DEBUG] loginsys.views: Alive creat user login= xcv
+2014-12-28 21:39:26,390 [DEBUG] loginsys.views: Alive creat user login= sdf
+2014-12-28 21:39:33,558 [DEBUG] my_app.views: Alive delete user with id= 0
+2014-12-28 21:39:47,236 [DEBUG] loginsys.views: Alive creat user login= sdfe
+2014-12-28 21:39:58,234 [DEBUG] loginsys.views: Alive creat user login= qw
