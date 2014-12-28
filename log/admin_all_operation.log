@@ -275,3 +275,8 @@
 2014-12-28 21:39:33,558 [DEBUG] my_app.views: Alive delete user with id= 0
 2014-12-28 21:39:47,236 [DEBUG] loginsys.views: Alive creat user login= sdfe
 2014-12-28 21:39:58,234 [DEBUG] loginsys.views: Alive creat user login= qw
+2014-12-28 22:10:37,314 [DEBUG] my_app.views: Alive got new token
+2014-12-28 22:10:38,957 [DEBUG] my_app.views: Alive lost token - 9c712e66-c1c8-4fa3-b29e-c5ab529ca291
+2014-12-28 22:10:39,977 [DEBUG] my_app.views: Alive edit user login= Alive fullname= Pavlo Levytskyi
+2014-12-28 22:10:50,241 [DEBUG] my_app.views: Alive changed permissions for more
+2014-12-28 22:10:58,078 [DEBUG] my_app.views: Alive changed permissions for more

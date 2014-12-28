@@ -10332,3 +10332,25 @@ KeyError: 'instance'
 2014-12-28 21:53:39,867 [WARNING] django.request: Not Found: /static/css/cub.css
 2014-12-28 21:53:39,874 [WARNING] django.request: Not Found: /static/css/main.css
 2014-12-28 22:00:34,022 [WARNING] django.request: Not Found: /favicon.ico
+2014-12-28 22:06:56,618 [ERROR] django.request: Internal Server Error: /users/edit/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/lamp/AdminUI/my_app/views.py", line 38, in edit
+    add_token(id)
+  File "/home/alive/lamp/AdminUI/loginsys/views.py", line 19, in add_token
+    profile.token = uuid.uuid4()
+NameError: global name 'uuid' is not defined
+2014-12-28 22:07:27,242 [ERROR] django.request: Internal Server Error: /users/edit/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alive/lamp/AdminUI/my_app/views.py", line 38, in edit
+    add_token(id)
+  File "/home/alive/lamp/AdminUI/loginsys/views.py", line 19, in add_token
+    profile.token = uuid.uuid4()
+NameError: global name 'uuid' is not defined

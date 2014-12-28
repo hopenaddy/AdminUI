@@ -1,4 +1,5 @@
 import json
+import uuid
 import logging
 from my_app.models import *
 from django.contrib import auth

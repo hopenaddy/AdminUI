@@ -51,7 +51,7 @@ def edit(request, id):
 def permission(request, id):
     user = User.objects.get(id=id)
     args = {}
-    args['name'] = user.username
+    args['this_name'] = user.username
     initial={'change_permission':False, 'change_user':False, 'add_user':False, 'delete_user':False}
     for i in initial:
         initial[i] = user.has_perm('auth.' + i)  
